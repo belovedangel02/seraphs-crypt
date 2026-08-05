@@ -1,0 +1,332 @@
+<!-- ==========================================================================
+     LIAM COURT — 90210 (AU)  ·  character page for The Seraph's Crypt
+     ==========================================================================
+     PASTE THIS INTO:  the bot's public description field (a DISPLAY field,
+     not Personality / Scenario / Dialogue / First Message).
+
+     Check before pasting: note the token count, paste, and see if it moves.
+     If it moves you are in a definition field and this markup will be sent
+     to the model on every message. It belongs where only humans read it.
+
+     No <iframe>, no url() in any inline style, no exotic properties inline —
+     all three are eaten by JanitorAI's sanitiser. See JANITOR-SELECTORS.md.
+     ========================================================================== -->
+
+<style>
+.lc { color: #8c8791; font-family: Arial, Helvetica, sans-serif; line-height: 1.75; }
+.lc * { box-sizing: border-box; }
+
+.lc-hero { padding: 34px 20px 30px; text-align: center; }
+.lc-world { color: #c5b8ca; font-family: Georgia, serif; font-size: 11px; letter-spacing: 6px; }
+.lc-name {
+  margin: 14px 0 0; color: #dedbe1; font-family: Georgia, serif; font-weight: normal;
+  font-size: 40px; letter-spacing: 6px; line-height: 1;
+}
+.lc-quote {
+  margin: 20px auto 0; max-width: 30em; color: #978a9e;
+  font-family: Georgia, serif; font-size: 15px; font-style: italic;
+}
+.lc-orn { margin: 26px 0; color: #5e4b3a; text-align: center; letter-spacing: 8px; font-size: 13px; }
+
+/* the disc — the iframe never survives, so the disc is the link */
+.lc-disc-link { display: inline-block; text-decoration: none; }
+.lc-disc {
+  display: block; width: 74px; height: 74px; margin: 0 auto; border-radius: 50%;
+  background-image: radial-gradient(circle at 50% 50%,
+    #302a36 0%, #141017 46%, #0a080c 47%, #181320 62%, #0c090e 63%, #1e1822 100%);
+  border: 1px solid rgba(197,184,202,0.45);
+  box-shadow: 0 0 16px rgba(112,14,26,0.32);
+  animation: lcSpin 8s linear infinite;
+}
+.lc-disc i {
+  display: block; width: 14px; height: 14px; margin: 30px auto 0;
+  border-radius: 50%; background-color: #000; border: 1px solid rgba(197,184,202,0.55);
+}
+@keyframes lcSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+.lc-track { margin: 12px 0 0; color: #c5b8ca; font-family: Georgia, serif; font-size: 12px; letter-spacing: 2px; }
+.lc-artist { margin: 3px 0 0; color: #4c4751; font-size: 10px; letter-spacing: 3px; }
+
+/* section headings — printer's rule and a fleuron, no graphics */
+.lc-head { display: flex; align-items: center; gap: 14px; margin: 46px 0 22px; }
+.lc-head::before, .lc-head::after { content: ""; flex: 1; border-top: 1px solid rgba(197,184,202,0.16); }
+.lc-head span { color: #c5b8ca; font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; white-space: nowrap; }
+
+/* the leaf — a page torn out and laid down */
+.lc-leaf {
+  position: relative; margin: 0 0 28px; padding: 28px 30px 40px;
+  color: #2e2118;
+  background-color: #cfc0a4;
+  background-image:
+    radial-gradient(circle at 21% 87%, rgba(120,92,52,0.20), transparent 24%),
+    radial-gradient(circle at 76% 17%, rgba(120,92,52,0.16), transparent 20%),
+    radial-gradient(ellipse at 16% 10%, rgba(255,251,238,0.52), transparent 58%),
+    radial-gradient(ellipse at 86% 84%, rgba(104,78,44,0.32), transparent 62%),
+    linear-gradient(158deg, #dacdb2, #c4b294 58%, #b6a284);
+  border-radius: 3px 11px 4px 13px / 13px 4px 11px 3px;
+  box-shadow: inset 0 0 46px rgba(92,68,38,0.40), inset 0 0 7px rgba(58,38,18,0.36), 0 16px 34px rgba(0,0,0,0.72);
+}
+.lc-leaf p { margin: 0 0 14px; color: #33261a; font-family: Georgia, serif; font-size: 14px; line-height: 1.85; }
+.lc-leaf p:last-child { margin-bottom: 0; }
+.lc-leaf .drop::first-letter { float: left; margin: 7px 8px 0 0; font-size: 42px; line-height: 0.76; color: #5e1420; }
+.lc-leaf h4 { margin: 0 0 10px; color: #5e1420; font-family: Georgia, serif; font-weight: normal; font-size: 11px; letter-spacing: 4px; }
+.lc-wax {
+  position: absolute; right: 24px; bottom: -20px; width: 78px; height: 78px;
+  display: block; padding-top: 27px;
+  border-radius: 47% 53% 52% 48% / 51% 47% 53% 49%;
+  background-image: radial-gradient(circle at 34% 28%, #a32434, #6d1220 56%, #440810);
+  box-shadow: inset 0 3px 8px rgba(255,190,190,0.22), inset 0 -7px 13px rgba(0,0,0,0.62), 0 7px 16px rgba(0,0,0,0.70);
+  color: #edccd0; font-family: Georgia, serif; font-size: 9px; letter-spacing: 1.5px;
+  line-height: 1.3; text-align: center; text-shadow: 0 1px 0 rgba(0,0,0,0.55);
+  transform: rotate(-7deg);
+}
+
+/* dark panels for everything that isn't paper */
+.lc-panel {
+  margin: 0 0 18px; padding: 20px 22px;
+  background-color: #070608; border: 1px solid rgba(197,184,202,0.14); border-radius: 14px;
+}
+.lc-panel h4 { margin: 0 0 12px; color: #c5b8ca; font-family: Georgia, serif; font-weight: normal; font-size: 11px; letter-spacing: 4px; }
+.lc-panel p { margin: 0 0 12px; font-size: 13px; }
+.lc-panel p:last-child { margin-bottom: 0; }
+.lc-panel em { color: #978a9e; font-family: Georgia, serif; }
+
+/* label ⋯ value */
+.lc-row { display: flex; align-items: baseline; gap: 10px; padding: 7px 0; border-bottom: 1px solid rgba(197,184,202,0.09); }
+.lc-row:last-child { border-bottom: none; }
+.lc-row b { color: #4c4751; font-weight: normal; font-size: 10px; letter-spacing: 3px; white-space: nowrap; }
+.lc-row i { flex: 1; border-bottom: 1px dotted rgba(197,184,202,0.16); }
+.lc-row span { color: #dedbe1; font-family: Georgia, serif; font-size: 13px; text-align: right; }
+
+/* pills */
+.lc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
+.lc-tags span {
+  padding: 4px 11px; background-color: #120c15;
+  border: 1px solid rgba(197,184,202,0.18); border-radius: 20px;
+  color: #978a9e; font-size: 10px; letter-spacing: 1px;
+}
+
+/* the warning — paper, but bled through */
+.lc-warn { border-left: 3px solid #700e1a; }
+.lc-warn h4 { color: #700e1a; }
+.lc-cols { display: grid; gap: 18px; }
+.lc-cols ul { margin: 0; padding-left: 18px; }
+.lc-cols li { margin: 0 0 5px; font-size: 12.5px; }
+
+/* setting plates */
+.lc-plates { display: grid; gap: 14px; }
+.lc-plate { margin: 0; padding: 9px; background-color: #0c0204; border: 1px solid rgba(112,14,26,0.5); border-radius: 16px; }
+.lc-plate img { display: block; width: 100%; height: auto; border: 1px solid rgba(112,14,26,0.4); border-radius: 10px; }
+.lc-plate figcaption { padding: 9px 2px 2px; color: #4c4751; font-size: 9px; letter-spacing: 3px; text-align: center; }
+
+/* the two ways in */
+.lc-intro {
+  display: block; margin: 0 0 12px; padding: 16px 20px;
+  background-color: #0a070c; border: 1px solid rgba(112,14,26,0.45); border-radius: 12px;
+}
+.lc-intro b { color: #961e2d; font-family: Georgia, serif; font-weight: normal; font-size: 11px; letter-spacing: 3px; }
+.lc-intro span { display: block; margin: 7px 0 0; color: #978a9e; font-family: Georgia, serif; font-size: 13px; font-style: italic; }
+
+.lc-foot { margin: 40px 0 0; color: #4c4751; font-family: Georgia, serif; font-size: 11px; font-style: italic; text-align: center; }
+
+@media (min-width: 620px) {
+  .lc-cols { grid-template-columns: 1fr 1fr 1fr; }
+  .lc-plates { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { .lc-disc { animation: none; } }
+</style>
+
+<div class="lc">
+
+  <div class="lc-hero">
+    <p class="lc-world">90210 &nbsp;&middot;&nbsp; SEASONS 4&ndash;5 AU</p>
+    <p class="lc-name">LIAM COURT</p>
+    <p class="lc-quote">&ldquo;You&rsquo;re the only good thing happening right now.&rdquo;</p>
+  </div>
+
+  <p class="lc-orn">&#10087;</p>
+
+  <div style="text-align: center;">
+    <a class="lc-disc-link" href="https://soundcloud.com/ashleymonroeofficial/hands-on-you" target="_blank" rel="noopener">
+      <span class="lc-disc"><i></i></span>
+      <span class="lc-track">HANDS ON YOU</span>
+      <span class="lc-artist">ASHLEY MONROE &nbsp;&middot;&nbsp; THEME</span>
+    </a>
+  </div>
+
+  <p class="lc-head"><span>THE SETUP</span></p>
+
+  <div class="lc-leaf">
+    <p class="drop">A rough-around-the-edges mechanic, surfer and former street racer whose toughest side is reserved for the world &mdash; not for you.</p>
+    <p>To everyone else, Liam can seem distant, guarded and difficult to approach. Around {{user}}, every wall comes down. He isn&rsquo;t interested in grand speeches or dramatic declarations. He shows love by showing up, fixing what&rsquo;s broken, making room beside him, and quietly making sure you&rsquo;re okay.</p>
+    <span class="lc-wax">90210</span>
+  </div>
+
+  <div class="lc-panel">
+    <div class="lc-row"><b>THE DYNAMIC</b><i></i><span>Bad boy &times; childhood sweetheart</span></div>
+    <div class="lc-row"><b>SETTING</b><i></i><span>West Beverly Hills &middot; the California coast</span></div>
+    <div class="lc-row"><b>POV</b><i></i><span>Fem &middot; second person</span></div>
+  </div>
+
+  <div class="lc-panel">
+    <h4>CORE TROPES</h4>
+    <p class="lc-tags">
+      <span>slow burn</span><span>established relationship</span><span>protective partner</span>
+      <span>safe haven</span><span>ride-or-die</span><span>secret softie</span>
+      <span>found family</span><span>emotional healing</span><span>trauma recovery</span>
+      <span>quiet devotion</span><span>domestic comfort</span><span>motorcycle rides</span>
+      <span>beach life</span><span>mechanics</span><span>us against the world</span>
+    </p>
+  </div>
+
+  <p class="lc-head"><span>WHAT TO EXPECT</span></p>
+
+  <div class="lc-panel">
+    <h4>THE ARRIVAL</h4>
+    <p>The familiar rumble of a matte-black motorcycle breaks the evening silence as Liam pulls into the beach car park. Helmet tucked beneath one arm, leather jacket scuffed from years of use, he gives you the same small smirk he always does.</p>
+    <p><em>&ldquo;You know, you&rsquo;re supposed to be staying out of trouble when I&rsquo;m not around.&rdquo;</em></p>
+  </div>
+
+  <div class="lc-plates">
+    <figure class="lc-plate">
+      <img src="https://belovedangel02.github.io/seraphs-crypt/images/liam-court-mechanic.png" alt="Liam in the garage">
+      <figcaption>GREASE &middot; THE GARAGE AFTER HOURS</figcaption>
+    </figure>
+    <figure class="lc-plate">
+      <img src="https://belovedangel02.github.io/seraphs-crypt/images/liam-court-surfer.png" alt="Liam on the coast">
+      <figcaption>SALT &middot; THE COAST BEFORE ANYONE WAKES</figcaption>
+    </figure>
+  </div>
+
+  <div class="lc-panel" style="margin-top: 18px;">
+    <h4>THE ATMOSPHERE</h4>
+    <p><em>Late-night coastal rides. Moonlit coves. The Offshore after closing. Grease-covered garages. Quiet beach mornings. Coffee from chipped mugs. Sunsets instead of parties.</em></p>
+  </div>
+
+  <div class="lc-panel">
+    <h4>HIS PRESENCE</h4>
+    <p>Liam doesn&rsquo;t dominate a room by talking the loudest. He does it by simply being there &mdash; grounded, observant and quietly dependable. The person everyone calls when something breaks, someone&rsquo;s in danger, or they need help without judgement.</p>
+  </div>
+
+  <p class="lc-head"><span>CONTENT &amp; THEMES</span></p>
+
+  <div class="lc-panel lc-warn">
+    <h4>&#9888; BEFORE YOU BEGIN</h4>
+    <div class="lc-cols">
+      <div>
+        <h4>EMOTIONAL</h4>
+        <ul>
+          <li>PTSD</li><li>Panic attacks</li><li>Childhood trauma</li>
+          <li>Hurt / comfort</li><li>Emotional healing</li><li>Trust issues</li><li>Found family</li>
+        </ul>
+      </div>
+      <div>
+        <h4>ACTION &amp; VIOLENCE</h4>
+        <ul>
+          <li>Underground boxing</li><li>Street racing</li><li>Physical violence</li>
+          <li>Kidnapping aftermath</li><li>Stalker storyline</li><li>Injuries</li><li>High-risk situations</li>
+        </ul>
+      </div>
+      <div>
+        <h4>ROMANCE</h4>
+        <ul>
+          <li>Established relationship</li><li>Mutual devotion</li><li>Domestic fluff</li>
+          <li>Physical affection</li><li>Protective partner</li><li>Slow-burn history</li><li>Healthy communication</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <p class="lc-head"><span>THE STORY</span></p>
+
+  <div class="lc-leaf">
+    <p class="drop">This AU follows Liam during Seasons 4&ndash;5, after gaining his independence. He owns The Offshore, lives in his beach bungalow, spends his days fixing engines and riding the California coast, while quietly carrying the weight of everything he&rsquo;s survived.</p>
+    <p>Rather than repeating canon relationship drama, this timeline centres entirely on Liam and {{user}} &mdash; childhood sweethearts who have grown together through every stage of life.</p>
+    <p>{{user}} isn&rsquo;t someone Liam falls in love with. She&rsquo;s the person he&rsquo;s always loved.</p>
+    <p>Together they build something ordinary in the best possible way: a home, a future, and a life that finally feels safe.</p>
+    <span class="lc-wax">S4&ndash;5<br>AU</span>
+  </div>
+
+  <p class="lc-head"><span>ABOUT LIAM</span></p>
+
+  <div class="lc-panel">
+    <div class="lc-row"><b>AGE</b><i></i><span>19</span></div>
+    <div class="lc-row"><b>ORIGIN</b><i></i><span>Long Island, New York</span></div>
+    <div class="lc-row"><b>HEIGHT</b><i></i><span>5&prime;10&Prime;</span></div>
+    <div class="lc-row"><b>BUILD</b><i></i><span>Athletic swimmer-surfer &middot; lean, functional</span></div>
+    <div class="lc-row"><b>COLOURING</b><i></i><span>Messy dark brown &middot; piercing blue &middot; light stubble</span></div>
+    <div class="lc-row"><b>MARKS</b><i></i><span>None &mdash; clean, uninked skin</span></div>
+    <div class="lc-row"><b>TRADES</b><i></i><span>Mechanic &middot; business owner &middot; surfer</span></div>
+    <div class="lc-row"><b>FORMERLY</b><i></i><span>High-fashion model &middot; underground boxer</span></div>
+  </div>
+
+  <div class="lc-panel">
+    <h4>PERSONALITY</h4>
+    <p class="lc-tags">
+      <span>brooding</span><span>guarded</span><span>dry-witted</span><span>loyal</span>
+      <span>practical</span><span>protective</span><span>quietly romantic</span>
+      <span>independent</span><span>hands-on</span>
+    </p>
+  </div>
+
+  <div class="lc-panel">
+    <h4>LOVE LANGUAGE</h4>
+    <p><em>Acts of service. Physical reassurance. Reliability. Quality time. Protective care.</em></p>
+    <p>He&rsquo;d rather fix your bike, wrap your hands before sparring, bring you coffee, or silently drape his jacket over your shoulders than make a long speech.</p>
+  </div>
+
+  <p class="lc-head"><span>BACKSTORY</span></p>
+
+  <div class="lc-leaf">
+    <p class="drop">Growing up in Long Island under an abusive stepfather and an absent father taught Liam to trust actions more than promises.</p>
+    <p>After arriving in Beverly Hills he never truly fit into the world of wealth and appearances. Instead he built a life through hard work &mdash; repairing engines, surfing, modelling when necessary, and eventually buying The Offshore, creating somewhere that finally felt like his own.</p>
+    <p>Following Ashley&rsquo;s kidnapping and the trauma that came after, Liam struggles with PTSD and panic attacks. Underground boxing becomes his unhealthy outlet, until {{user}} helps him begin rebuilding.</p>
+    <p>This AU removes the romantic canon drama entirely, so his emotional journey can be about healing rather than repeating the same mistakes.</p>
+    <span class="lc-wax">LONG<br>ISLAND</span>
+  </div>
+
+  <p class="lc-head"><span>HIS HANDS</span></p>
+
+  <div class="lc-panel">
+    <p class="lc-tags">
+      <span>expert mechanic</span><span>skilled carpenter</span><span>boat builder</span>
+      <span>motorcycle rider</span><span>street racer</span><span>surfer</span>
+      <span>business owner</span><span>practical problem-solver</span>
+    </p>
+  </div>
+
+  <p class="lc-head"><span>WHERE IT HAPPENS</span></p>
+
+  <div class="lc-panel">
+    <p class="lc-tags">
+      <span>The Offshore</span><span>the beach bungalow</span><span>the Pacific coastline</span>
+      <span>hidden coves</span><span>garages</span><span>The Peach Pit</span>
+      <span>quiet diners</span><span>empty beaches after dark</span>
+    </p>
+  </div>
+
+  <p class="lc-head"><span>TWO WAYS IN</span></p>
+
+  <div class="lc-intro">
+    <b>THE FIRST</b>
+    <span>The beach car park at dusk. He&rsquo;s come to find you, the way he always does.</span>
+  </div>
+  <div class="lc-intro">
+    <b>THE SECOND</b>
+    <span>The garage after closing. The door was locked, and you found a way in anyway.</span>
+  </div>
+
+  <p class="lc-head"><span>FROM THE KEEPER</span></p>
+
+  <div class="lc-panel">
+    <p>An open-definition AU built around Liam&rsquo;s established 90210 personality, expanding his later canon into a grounded, character-driven romance. Dialogue stays modern, understated and action-led; emotional intimacy is shown through behaviour rather than melodrama.</p>
+    <p class="lc-tags" style="margin-top: 14px;">
+      <span>#90210</span><span>#slowburn</span><span>#protective</span><span>#mechanic</span>
+      <span>#motorcycles</span><span>#beachlife</span><span>#foundfamily</span>
+      <span>#traumarecovery</span><span>#tvshowau</span>
+    </p>
+  </div>
+
+  <p class="lc-orn">&#10087;</p>
+  <p class="lc-foot">from The Seraph&rsquo;s Crypt &middot; things that were nearly lost, kept</p>
+
+</div>
