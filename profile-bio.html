@@ -17,11 +17,6 @@ margin: 0;
 padding: 30px 16px;
 box-sizing: border-box;
 background-color: rgb(0, 0, 0);
-background-image: linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.93)), url('https://belovedangel02.github.io/seraphs-crypt/images/crypt-background.jpg');
-background-repeat: no-repeat;
-background-position: center top;
-background-size: cover;
-background-attachment: fixed;
 color: rgb(170, 166, 174);
 font-family: Arial, Helvetica, sans-serif;
 ">
@@ -68,14 +63,26 @@ font-family: Arial, Helvetica, sans-serif;
   .crypt-banner-title { font-size: 32px !important; letter-spacing: 3px !important; }
 }
 @media (max-width: 620px) {
+  /* A 4:1 plate is only ~90px tall on a phone — far too short to carry type.
+     Crop it to 3:2 instead, holding the right-hand side where she sits, and
+     lay the name across the foot of the art. */
+  .crypt-banner { aspect-ratio: 3 / 2; }
+  .crypt-banner > img { height: 100% !important; object-fit: cover; object-position: 78% center; }
+  .crypt-banner-veil {
+    width: 100% !important;
+    background-image: linear-gradient(to top,
+      rgba(0,0,0,0.92) 12%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 78%) !important;
+  }
   .crypt-banner-name {
-    position: static !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: auto !important;
+    bottom: 7% !important;
     transform: none !important;
-    padding: 16px 18px 18px 18px;
+    padding: 0 18px;
     text-align: center !important;
   }
-  .crypt-banner-veil { display: none !important; }
-  .crypt-banner-title { font-size: 27px !important; }
+  .crypt-banner-title { font-size: 30px !important; }
 }
 
 @media (prefers-reduced-motion: reduce) {
