@@ -14,30 +14,34 @@
    Only what bites on JanitorAI: no hashed class names, no guesswork.
    ========================================================================== */
 
-/* THE STARLESS SKY — every layer of the page painted out */
-html, body, #root, #__next, main,
-[class*="App"], [class*="app"],
-[class*="Layout"], [class*="layout"],
-[class*="Page"], [class*="page"],
-[class*="Container"], [class*="container"],
-[class*="Wrapper"], [class*="wrapper"],
-[class*="Background"], [class*="background"],
-[class*="Profile"], [class*="profile"],
-[class*="Content"], [class*="content"] {
-  background-color: #000000 !important;
-  background-image: none !important;
-}
+/* THE STARLESS SKY — the crypt illustration lies behind everything.
+   Do not paint the containers black: that is what buried it before. They go
+   transparent, the illustration sits on body under a veil, and the panels
+   keep their own dark fills so the writing stays legible over it. */
+html, body { background-color: #000000 !important; }
 body { color: #dedbe1 !important; }
 body {
-  background-color: #000000 !important;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0.84), rgba(0, 0, 0, 0.93)),
+    linear-gradient(rgba(0, 0, 0, 0.74), rgba(0, 0, 0, 0.90)),
     url("https://belovedangel02.github.io/seraphs-crypt/images/crypt-background.jpg") !important;
   background-repeat: no-repeat, no-repeat !important;
   background-position: center top, center top !important;
   background-size: cover, cover !important;
   background-attachment: fixed, fixed !important;
 }
+
+#root, main, #crypt-bio,
+.pp-page-background, .profile-page-flex,
+.profile-info-stack, .profile-info-stack-inner,
+.pp-uc-background, .pp-uc-background > div, .pp-uc-about-me,
+[class*="Wrapper"], [class*="wrapper"],
+[class*="Container"], [class*="container"],
+[class*="Layout"], [class*="layout"],
+[class*="Page"], [class*="page"] {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+.profile-background-effect-image { display: none !important; }
 
 /* THE SEALS THAT OPEN — the angel-wing sections */
 summary { list-style: none !important; cursor: pointer;

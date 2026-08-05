@@ -621,7 +621,7 @@ max-width: 100%;
 margin: 0;
 padding: 30px 16px;
 box-sizing: border-box;
-background-color: rgb(0, 0, 0);
+background-color: transparent;
 color: rgb(170, 166, 174);
 font-family: Arial, Helvetica, sans-serif;
 ">
@@ -696,12 +696,56 @@ font-family: Arial, Helvetica, sans-serif;
   .crypt-banner-title { font-size: 30px !important; }
 }
 
+/* THE ONE THAT WATCHES — pinned to the corner while the crypt scrolls past.
+   Never takes a tap, and steps aside on a phone where there is no room. */
+.crypt-familiar { pointer-events: none; user-select: none; }
+@media (max-width: 900px) { .crypt-familiar { width: 96px !important; opacity: 0.72 !important; } }
+@media (max-width: 620px) { .crypt-familiar { display: none !important; } }
+
+/* PETALS ON THE AIR — three drifting down the page, behind everything. */
+@keyframes cryptFall {
+  0%   { transform: translateY(-8vh) translateX(0) rotate(0deg);      opacity: 0; }
+  10%  { opacity: 0.55; }
+  90%  { opacity: 0.4; }
+  100% { transform: translateY(104vh) translateX(6vw) rotate(320deg); opacity: 0; }
+}
+.crypt-petal {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 13px;
+  height: 13px;
+  border-radius: 60% 0 60% 0;
+  background-image: linear-gradient(140deg, #961e2d, #4a0910);
+  pointer-events: none;
+  animation: cryptFall linear infinite;
+}
+.crypt-petal:nth-of-type(1) { left: 12%; animation-duration: 19s; animation-delay:  0s; }
+.crypt-petal:nth-of-type(2) { left: 47%; animation-duration: 26s; animation-delay: -8s; width: 9px; height: 9px; }
+.crypt-petal:nth-of-type(3) { left: 78%; animation-duration: 22s; animation-delay: -14s; }
+@media (prefers-reduced-motion: reduce) { .crypt-petal { display: none; } }
+@media (max-width: 620px)               { .crypt-petal { display: none; } }
+
 @media (prefers-reduced-motion: reduce) {
   .crypt-vitrine { transition: none; }
   .crypt-vitrine:hover, .crypt-vitrine:focus-visible { transform: none; }
   .crypt-wall { scroll-snap-type: none; }
 }
 </style>
+
+<img class="crypt-familiar" src="https://belovedangel02.github.io/seraphs-crypt/images/the-raven.png" alt="" aria-hidden="true" style="
+position: fixed;
+left: 10px;
+bottom: 0;
+z-index: 900;
+width: 132px;
+height: auto;
+opacity: 0.88;
+">
+
+<span class="crypt-petal" aria-hidden="true"></span>
+<span class="crypt-petal" aria-hidden="true"></span>
+<span class="crypt-petal" aria-hidden="true"></span>
 
 <a href="#crypt-vessels" style="
 position: fixed;
