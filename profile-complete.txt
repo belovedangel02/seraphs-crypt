@@ -630,6 +630,12 @@ font-family: Arial, Helvetica, sans-serif;
 /* What inline style="" cannot express. If a sanitiser ever drops this block,
    the crypt degrades to the plain stacked layout underneath — nothing breaks. */
 
+/* These three trip JanitorAI's inline-style whitelist — meet one and it
+   truncates the whole attribute, spilling the rest onto the page as text.
+   They live here instead, where the whitelist does not apply. */
+.crypt-wall { overflow-x: auto; }
+.crypt-vitrine { flex: 0 0 268px; scroll-snap-align: start; }
+
 .crypt-wall {
   scroll-snap-type: x mandatory;
   scrollbar-width: thin;
@@ -1385,13 +1391,10 @@ letter-spacing: 2px;
 position: relative;
 display: flex;
 gap: 16px;
-overflow-x: auto;
 padding: 4px 18px 18px 18px;
 text-align: left;
 ">
 <a href="#incarnations" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1408,8 +1411,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#fourth-wing" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1426,8 +1427,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#supernatural" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1444,8 +1443,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#camp-half-blood" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1462,8 +1459,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#elfhame" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1480,8 +1475,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#ana-huang" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1498,8 +1491,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#dark-dystopian" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
@@ -1516,8 +1507,6 @@ text-align: left;
 <p class="crypt-enter" style="margin: 18px 0 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ENTER &rarr;</p>
 </a>
 <a href="#lost-tales" class="crypt-vitrine" style="
-flex: 0 0 268px;
-scroll-snap-align: start;
 display: block;
 padding: 22px 20px;
 background-color: rgb(5, 5, 5);
