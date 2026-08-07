@@ -68,8 +68,20 @@ body {
   flex-direction: column !important;
   align-items: stretch !important;
 }
-.crypt-banner        { order: -2 !important; width: 100% !important; }
-.profile-info-hstack { order: -1 !important; }
+/* Full-bleed, flush to the top, the way RotWire's and Hime's covers sit —
+   100vw with a negative margin breaks it out of the column's padding, and
+   the frame comes off because a cover has no edges. */
+.crypt-banner {
+  order: -2 !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin: 0 0 0 calc(50% - 50vw) !important;
+  border: none !important;
+  border-radius: 0 !important;
+}
+/* The avatar rides up over the foot of the cover instead of sitting under it. */
+.profile-info-hstack { order: -1 !important; margin-top: -44px !important; }
+.profile-info-stack { padding-top: 0 !important; }
 
 /* THE SEALS THAT OPEN — the angel-wing sections */
 summary { list-style: none !important; cursor: pointer;
