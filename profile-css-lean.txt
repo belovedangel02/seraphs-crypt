@@ -54,6 +54,23 @@ body {
    the crypt illustration reads at full strength. */
 .profile-page-background { filter: none !important; opacity: 1 !important; }
 
+
+/* THE BANNER FIRST — by default About Me renders below JanitorAI's own
+   avatar-and-username block, so the crypt opened underneath it. display:
+   contents dissolves both wrappers, which promotes every block inside to a
+   child of the profile stack; the stack is then a column and the banner is
+   ordered above the avatar. Everything else keeps document order at 0. */
+.profile-about-me, .pp-uc-about-me,
+#crypt-bio { display: contents !important; }
+
+.profile-info-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+}
+.crypt-banner        { order: -2 !important; width: 100% !important; }
+.profile-info-hstack { order: -1 !important; }
+
 /* THE SEALS THAT OPEN — the angel-wing sections */
 summary { list-style: none !important; cursor: pointer;
   transition: border-color 0.3s ease, background-color 0.3s ease !important; }
