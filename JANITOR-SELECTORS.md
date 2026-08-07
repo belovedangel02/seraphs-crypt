@@ -125,16 +125,67 @@ each vessel with its world:
 | `.pp-fl-search-input`, `.pp-fl-filter-button` | the profile's own search and filter |
 | `.pp-pg-page-button` | pagination numbers |
 
-## Exclusive accordions
+## What JanitorAI disables
 
-`<details name="...">` — same name on several, and opening one closes the rest.
-Native, no script. Worth knowing for the crypt: the thirteen seals currently all
-open independently, which is fine, but a tab strip wants this instead.
+There is an official list, maintained by Puppy and MantaRae in the JanitorAI
+CSS Collection carrd. It supersedes anything worked out by trial and error
+here, including two things this file previously got wrong.
 
-```html
-<details name="profile-tabs" open><summary>About</summary>…</details>
-<details name="profile-tabs"><summary>Rules</summary>…</details>
-```
+**Tags:** `<script>` · `<button>` · `<input type>` · `<label>` · `<svg>` ·
+`<path>` · `<textpath>` · `<video src>` · `<audio>`
+
+**Properties:** `url()` · `scrollbar-width` · `scrollbar-color` ·
+`scrollbar-gutter` · `overflow-clip-margin` · `scroll-behaviour` ·
+`scroll-margin` · `scroll-padding` · every `scroll-snap-*` ·
+`column-gap` · `row-gap` · `place-items` · `mask-composite` ·
+every `offset-*` · `-inline-start/end` · `-block-start/end`
+
+**At-rules and features:** `@container` · `@property` · CSS nesting ·
+**CSS variables** · `attr(data-text)` · **ARIA attributes** ·
+**the `name` attribute on `<details>`**
+
+### Two corrections to what this file used to say
+
+**`<details name="...">` does not work.** The `name` attribute is disabled, so
+the exclusive-accordion trick — open one, the others close — is not available.
+Those tab strips on the bought themes are doing it another way. The crypt's
+thirteen seals open independently, and that is the only option.
+
+**CSS variables are disabled.** Every colour has to be written out in full.
+No `--oxblood: #700e1a` and `var(--oxblood)` afterwards.
+
+### Workarounds the carrd suggests
+
+| Disabled | Instead |
+|---|---|
+| `<button>`, `<input>` | a `<div>` or `<span>` styled to look like one |
+| `<svg>`, `<path>` | Unicode — ★ ✔ ⬤ ▲ ❦ — or `border-radius` / `clip-path` |
+| `<label>` | a styled `<span>` beside the fake control |
+| scroll / overflow properties | fixed-height container plus `overflow: auto` |
+| `mask-composite` | `clip-path`, or gradient overlays |
+
+## Where code is allowed at all
+
+**Profile only.** In the carrd's words: *"Customization is profile-only. Other
+site areas allow limited HTML and no CSS."*
+
+| Surface | HTML | `<style>` | Inline `style=""` |
+|---|---|---|---|
+| Settings → About Me | ✅ | ✅ | ✅ |
+| Profile CSS Editor | — | CSS only, no tags | — |
+| **Character description** | limited | ❌ **stripped** | ✅ |
+| Anywhere else | limited | ❌ | ✅ |
+
+A `<style>` block pasted into a character description renders as visible text —
+the tags print on the page. Character pages must be inline-styled throughout,
+which rules out `:hover`, `@keyframes`, `@media` and pseudo-elements there.
+
+Two more from the carrd worth remembering: **there is no autosave and the CSS
+Editor has no undo**, so keep the repo copy authoritative; and **saving in one
+editor can overwrite the other**, so stick to About Me and leave the in-page
+editor alone.
+
+Source: the JanitorAI CSS Collection carrd, maintained by MantaRae and Puppy.
 
 ## The trick worth knowing
 

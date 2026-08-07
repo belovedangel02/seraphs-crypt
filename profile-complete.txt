@@ -634,12 +634,9 @@ font-family: Arial, Helvetica, sans-serif;
    truncates the whole attribute, spilling the rest onto the page as text.
    They live here instead, where the whitelist does not apply. */
 .crypt-wall { overflow-x: auto; }
-.crypt-vitrine { flex: 0 0 268px; scroll-snap-align: start; }
+.crypt-vitrine { flex: 0 0 268px; }
 
 .crypt-wall {
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: #4c4751 transparent;
 }
 .crypt-wall::-webkit-scrollbar { height: 6px; }
 .crypt-wall::-webkit-scrollbar-track { background: transparent; }
@@ -729,11 +726,10 @@ font-family: Arial, Helvetica, sans-serif;
 @media (prefers-reduced-motion: reduce) {
   .crypt-vitrine { transition: none; }
   .crypt-vitrine:hover, .crypt-vitrine:focus-visible { transform: none; }
-  .crypt-wall { scroll-snap-type: none; }
 }
 </style>
 
-<img class="crypt-familiar" src="https://belovedangel02.github.io/seraphs-crypt/images/the-raven.png" alt="" aria-hidden="true" style="
+<img class="crypt-familiar" src="https://belovedangel02.github.io/seraphs-crypt/images/the-raven.png" alt="" style="
 position: fixed;
 left: 10px;
 bottom: 0;
@@ -743,9 +739,9 @@ height: auto;
 opacity: 0.88;
 ">
 
-<span class="crypt-petal" aria-hidden="true"></span>
-<span class="crypt-petal" aria-hidden="true"></span>
-<span class="crypt-petal" aria-hidden="true"></span>
+<span class="crypt-petal"></span>
+<span class="crypt-petal"></span>
+<span class="crypt-petal"></span>
 
 <a href="#crypt-vessels" style="
 position: fixed;
@@ -1406,7 +1402,7 @@ padding: 24px 0 18px 0;
 text-align: center;
 ">
 
-<p aria-hidden="true" class="crypt-ghost" style="
+<p class="crypt-ghost" style="
 position: absolute;
 left: 0;
 right: 0;

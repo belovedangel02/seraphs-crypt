@@ -123,17 +123,23 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
 
 
 /* THE GALLERY WALL — plates fall into columns and keep their own heights */
-.crypt-masonry { column-count: 2; column-gap: 12px; }
+.crypt-masonry { column-count: 2; }
+.crypt-plate { margin-right: 12px; }
 .crypt-plate { break-inside: avoid; -webkit-column-break-inside: avoid; }
 @media (min-width: 720px) { .crypt-masonry { column-count: 3; } }
 @media (max-width: 460px) { .crypt-masonry { column-count: 1; } }
+
+
+/* Removed, not forgotten: scrollbar-width, scrollbar-color and column-gap are
+   on JanitorAI's disabled list, along with every scroll-snap-* property. The
+   ::-webkit-scrollbar pseudo-elements below still work, and the worlds row
+   scrolls sideways without snapping. See JANITOR-SELECTORS.md. */
 
 /* THE WINDING PASSAGE — scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #050505; }
 ::-webkit-scrollbar-thumb { background: #4c4751; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #c5b8ca; }
-* { scrollbar-width: thin; scrollbar-color: #4c4751 #050505; }
 
 /* ==========================================================================
    THE VESSELS — the bot cards

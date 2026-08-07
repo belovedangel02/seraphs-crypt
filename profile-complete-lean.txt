@@ -125,17 +125,23 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
 
 
 /* THE GALLERY WALL — plates fall into columns and keep their own heights */
-.crypt-masonry { column-count: 2; column-gap: 12px; }
+.crypt-masonry { column-count: 2; }
+.crypt-plate { margin-right: 12px; }
 .crypt-plate { break-inside: avoid; -webkit-column-break-inside: avoid; }
 @media (min-width: 720px) { .crypt-masonry { column-count: 3; } }
 @media (max-width: 460px) { .crypt-masonry { column-count: 1; } }
+
+
+/* Removed, not forgotten: scrollbar-width, scrollbar-color and column-gap are
+   on JanitorAI's disabled list, along with every scroll-snap-* property. The
+   ::-webkit-scrollbar pseudo-elements below still work, and the worlds row
+   scrolls sideways without snapping. See JANITOR-SELECTORS.md. */
 
 /* THE WINDING PASSAGE — scrollbar */
 ::-webkit-scrollbar { width: 6px; height: 6px; }
 ::-webkit-scrollbar-track { background: #050505; }
 ::-webkit-scrollbar-thumb { background: #4c4751; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #c5b8ca; }
-* { scrollbar-width: thin; scrollbar-color: #4c4751 #050505; }
 
 /* ==========================================================================
    THE VESSELS — the bot cards
@@ -332,12 +338,9 @@ font-family: Arial, Helvetica, sans-serif;
    truncates the whole attribute, spilling the rest onto the page as text.
    They live here instead, where the whitelist does not apply. */
 .crypt-wall { overflow-x: auto; }
-.crypt-vitrine { flex: 0 0 268px; scroll-snap-align: start; }
+.crypt-vitrine { flex: 0 0 268px; }
 
 .crypt-wall {
-  scroll-snap-type: x mandatory;
-  scrollbar-width: thin;
-  scrollbar-color: #4c4751 transparent;
 }
 .crypt-wall::-webkit-scrollbar { height: 6px; }
 .crypt-wall::-webkit-scrollbar-track { background: transparent; }
@@ -427,11 +430,10 @@ font-family: Arial, Helvetica, sans-serif;
 @media (prefers-reduced-motion: reduce) {
   .crypt-vitrine { transition: none; }
   .crypt-vitrine:hover, .crypt-vitrine:focus-visible { transform: none; }
-  .crypt-wall { scroll-snap-type: none; }
 }
 </style>
 
-<img class="crypt-familiar" src="https://belovedangel02.github.io/seraphs-crypt/images/the-raven.png" alt="" aria-hidden="true" style="
+<img class="crypt-familiar" src="https://belovedangel02.github.io/seraphs-crypt/images/the-raven.png" alt="" style="
 position: fixed;
 left: 10px;
 bottom: 0;
@@ -441,9 +443,9 @@ height: auto;
 opacity: 0.88;
 ">
 
-<span class="crypt-petal" aria-hidden="true"></span>
-<span class="crypt-petal" aria-hidden="true"></span>
-<span class="crypt-petal" aria-hidden="true"></span>
+<span class="crypt-petal"></span>
+<span class="crypt-petal"></span>
+<span class="crypt-petal"></span>
 
 <a href="#crypt-vessels" style="
 position: fixed;
@@ -1104,7 +1106,7 @@ padding: 24px 0 18px 0;
 text-align: center;
 ">
 
-<p aria-hidden="true" class="crypt-ghost" style="
+<p class="crypt-ghost" style="
 position: absolute;
 left: 0;
 right: 0;

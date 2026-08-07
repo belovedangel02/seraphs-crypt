@@ -1,332 +1,175 @@
 <!-- ==========================================================================
      LIAM COURT — 90210 (AU)  ·  character page for The Seraph's Crypt
      ==========================================================================
-     PASTE THIS INTO:  the bot's public description field (a DISPLAY field,
-     not Personality / Scenario / Dialogue / First Message).
+     PASTE THIS INTO:  the bot's public description field (confirmed 0 tokens).
 
-     Check before pasting: note the token count, paste, and see if it moves.
-     If it moves you are in a definition field and this markup will be sent
-     to the model on every message. It belongs where only humans read it.
+     INLINE STYLES ONLY. Character descriptions strip <style> blocks — unlike
+     Settings > About Me, which keeps them. That means no classes, no :hover,
+     no @keyframes, no media queries here. Every rule rides on the element.
 
-     No <iframe>, no url() in any inline style, no exotic properties inline —
-     all three are eaten by JanitorAI's sanitiser. See JANITOR-SELECTORS.md.
+     Also avoided, because JanitorAI's inline whitelist truncates the whole
+     attribute when it meets one: url(), flex, scroll-snap, overflow-x.
+     Layout is done with tables and inline-block, which do survive.
      ========================================================================== -->
 
-<style>
-.lc { color: #8c8791; font-family: Arial, Helvetica, sans-serif; line-height: 1.75; }
-.lc * { box-sizing: border-box; }
+<div style="color: rgb(140, 135, 145); font-family: Arial, Helvetica, sans-serif; line-height: 1.75;">
 
-.lc-hero { padding: 34px 20px 30px; text-align: center; }
-.lc-world { color: #c5b8ca; font-family: Georgia, serif; font-size: 11px; letter-spacing: 6px; }
-.lc-name {
-  margin: 14px 0 0; color: #dedbe1; font-family: Georgia, serif; font-weight: normal;
-  font-size: 40px; letter-spacing: 6px; line-height: 1;
-}
-.lc-quote {
-  margin: 20px auto 0; max-width: 30em; color: #978a9e;
-  font-family: Georgia, serif; font-size: 15px; font-style: italic;
-}
-.lc-orn { margin: 26px 0; color: #5e4b3a; text-align: center; letter-spacing: 8px; font-size: 13px; }
+<div style="padding: 30px 16px 24px; text-align: center;">
+<p style="margin: 0; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 6px;">90210 &nbsp;&middot;&nbsp; SEASONS 4&ndash;5 AU</p>
+<p style="margin: 14px 0 0; color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 34px; letter-spacing: 5px; line-height: 1.1;">LIAM COURT</p>
+<p style="margin: 18px auto 0; max-width: 30em; color: rgb(151, 138, 158); font-family: Georgia, serif; font-size: 15px; font-style: italic;">&ldquo;You&rsquo;re the only good thing happening right now.&rdquo;</p>
+</div>
 
-/* the disc — the iframe never survives, so the disc is the link */
-.lc-disc-link { display: inline-block; text-decoration: none; }
-.lc-disc {
-  display: block; width: 74px; height: 74px; margin: 0 auto; border-radius: 50%;
-  background-image: radial-gradient(circle at 50% 50%,
-    #302a36 0%, #141017 46%, #0a080c 47%, #181320 62%, #0c090e 63%, #1e1822 100%);
-  border: 1px solid rgba(197,184,202,0.45);
-  box-shadow: 0 0 16px rgba(112,14,26,0.32);
-  animation: lcSpin 8s linear infinite;
-}
-.lc-disc i {
-  display: block; width: 14px; height: 14px; margin: 30px auto 0;
-  border-radius: 50%; background-color: #000; border: 1px solid rgba(197,184,202,0.55);
-}
-@keyframes lcSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-.lc-track { margin: 12px 0 0; color: #c5b8ca; font-family: Georgia, serif; font-size: 12px; letter-spacing: 2px; }
-.lc-artist { margin: 3px 0 0; color: #4c4751; font-size: 10px; letter-spacing: 3px; }
+<p style="margin: 22px 0; color: rgb(94, 75, 58); text-align: center; letter-spacing: 8px; font-size: 13px;">&#10087;</p>
 
-/* section headings — printer's rule and a fleuron, no graphics */
-.lc-head { display: flex; align-items: center; gap: 14px; margin: 46px 0 22px; }
-.lc-head::before, .lc-head::after { content: ""; flex: 1; border-top: 1px solid rgba(197,184,202,0.16); }
-.lc-head span { color: #c5b8ca; font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; white-space: nowrap; }
+<div style="text-align: center;">
+<a href="https://soundcloud.com/ashleymonroeofficial/hands-on-you" style="display: inline-block; text-decoration: none;">
+<span style="display: block; width: 72px; height: 72px; margin: 0 auto; border-radius: 50%; background-color: rgb(24, 19, 32); border: 1px solid rgba(197, 184, 202, 0.45); box-shadow: 0 0 16px rgba(112, 14, 26, 0.32);">
+<span style="display: block; width: 14px; height: 14px; margin: 29px auto 0; border-radius: 50%; background-color: rgb(0, 0, 0); border: 1px solid rgba(197, 184, 202, 0.55);"></span>
+</span>
+<span style="display: block; margin: 12px 0 0; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 12px; letter-spacing: 2px;">HANDS ON YOU</span>
+<span style="display: block; margin: 3px 0 0; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ASHLEY MONROE &nbsp;&middot;&nbsp; LISTEN &nearr;</span>
+</a>
+</div>
 
-/* the leaf — a page torn out and laid down */
-.lc-leaf {
-  position: relative; margin: 0 0 28px; padding: 28px 30px 40px;
-  color: #2e2118;
-  background-color: #cfc0a4;
-  background-image:
-    radial-gradient(circle at 21% 87%, rgba(120,92,52,0.20), transparent 24%),
-    radial-gradient(circle at 76% 17%, rgba(120,92,52,0.16), transparent 20%),
-    radial-gradient(ellipse at 16% 10%, rgba(255,251,238,0.52), transparent 58%),
-    radial-gradient(ellipse at 86% 84%, rgba(104,78,44,0.32), transparent 62%),
-    linear-gradient(158deg, #dacdb2, #c4b294 58%, #b6a284);
-  border-radius: 3px 11px 4px 13px / 13px 4px 11px 3px;
-  box-shadow: inset 0 0 46px rgba(92,68,38,0.40), inset 0 0 7px rgba(58,38,18,0.36), 0 16px 34px rgba(0,0,0,0.72);
-}
-.lc-leaf p { margin: 0 0 14px; color: #33261a; font-family: Georgia, serif; font-size: 14px; line-height: 1.85; }
-.lc-leaf p:last-child { margin-bottom: 0; }
-.lc-leaf .drop::first-letter { float: left; margin: 7px 8px 0 0; font-size: 42px; line-height: 0.76; color: #5e1420; }
-.lc-leaf h4 { margin: 0 0 10px; color: #5e1420; font-family: Georgia, serif; font-weight: normal; font-size: 11px; letter-spacing: 4px; }
-.lc-wax {
-  position: absolute; right: 24px; bottom: -20px; width: 78px; height: 78px;
-  display: block; padding-top: 27px;
-  border-radius: 47% 53% 52% 48% / 51% 47% 53% 49%;
-  background-image: radial-gradient(circle at 34% 28%, #a32434, #6d1220 56%, #440810);
-  box-shadow: inset 0 3px 8px rgba(255,190,190,0.22), inset 0 -7px 13px rgba(0,0,0,0.62), 0 7px 16px rgba(0,0,0,0.70);
-  color: #edccd0; font-family: Georgia, serif; font-size: 9px; letter-spacing: 1.5px;
-  line-height: 1.3; text-align: center; text-shadow: 0 1px 0 rgba(0,0,0,0.55);
-  transform: rotate(-7deg);
-}
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">THE SETUP</p>
 
-/* dark panels for everything that isn't paper */
-.lc-panel {
-  margin: 0 0 18px; padding: 20px 22px;
-  background-color: #070608; border: 1px solid rgba(197,184,202,0.14); border-radius: 14px;
-}
-.lc-panel h4 { margin: 0 0 12px; color: #c5b8ca; font-family: Georgia, serif; font-weight: normal; font-size: 11px; letter-spacing: 4px; }
-.lc-panel p { margin: 0 0 12px; font-size: 13px; }
-.lc-panel p:last-child { margin-bottom: 0; }
-.lc-panel em { color: #978a9e; font-family: Georgia, serif; }
+<div style="position: relative; margin: 22px 0 26px; padding: 26px 28px 34px; color: rgb(46, 33, 24); border-radius: 3px 11px 4px 13px / 13px 4px 11px 3px; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.72); background-color: rgb(202, 186, 158);">
+<p style="margin: 0 0 14px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">A rough-around-the-edges mechanic, surfer and former street racer whose toughest side is reserved for the world &mdash; not for you.</p>
+<p style="margin: 0 0 18px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">To everyone else, Liam can seem distant, guarded and difficult to approach. Around {{user}}, every wall comes down. He isn&rsquo;t interested in grand speeches or dramatic declarations. He shows love by showing up, fixing what&rsquo;s broken, making room beside him, and quietly making sure you&rsquo;re okay.</p>
+<p style="margin: 0; text-align: right;"><span style="display: inline-block; width: 74px; height: 74px; padding-top: 26px; border-radius: 47% 53% 52% 48% / 51% 47% 53% 49%; background-color: rgb(109, 18, 32); box-shadow: inset 0 -7px 13px rgba(0, 0, 0, 0.55), 0 6px 14px rgba(0, 0, 0, 0.7); color: rgb(237, 204, 208); font-family: Georgia, serif; font-size: 9px; letter-spacing: 1.5px; line-height: 1.3; text-align: center;">90210</span></p>
+</div>
 
-/* label ⋯ value */
-.lc-row { display: flex; align-items: baseline; gap: 10px; padding: 7px 0; border-bottom: 1px solid rgba(197,184,202,0.09); }
-.lc-row:last-child { border-bottom: none; }
-.lc-row b { color: #4c4751; font-weight: normal; font-size: 10px; letter-spacing: 3px; white-space: nowrap; }
-.lc-row i { flex: 1; border-bottom: 1px dotted rgba(197,184,202,0.16); }
-.lc-row span { color: #dedbe1; font-family: Georgia, serif; font-size: 13px; text-align: right; }
+<table style="width: 100%; margin: 0 0 18px; padding: 6px 20px; border-collapse: collapse; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<tr><td style="padding: 9px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">THE DYNAMIC</td><td style="padding: 9px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Bad boy &times; childhood sweetheart</td></tr>
+<tr><td style="padding: 9px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">SETTING</td><td style="padding: 9px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">West Beverly Hills &middot; the coast</td></tr>
+<tr><td style="padding: 9px 6px; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">POV</td><td style="padding: 9px 6px; color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Fem &middot; second person</td></tr>
+</table>
 
-/* pills */
-.lc-tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; }
-.lc-tags span {
-  padding: 4px 11px; background-color: #120c15;
-  border: 1px solid rgba(197,184,202,0.18); border-radius: 20px;
-  color: #978a9e; font-size: 10px; letter-spacing: 1px;
-}
+<div style="margin: 0 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 12px; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">CORE TROPES</p>
+<p style="margin: 0; line-height: 2.4;"><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">slow burn</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">established relationship</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">protective partner</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">safe haven</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">ride-or-die</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">secret softie</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">found family</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">emotional healing</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">trauma recovery</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">quiet devotion</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">domestic comfort</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">motorcycle rides</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">beach life</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">mechanics</span><span style="padding: 4px 11px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">us against the world</span></p>
+</div>
 
-/* the warning — paper, but bled through */
-.lc-warn { border-left: 3px solid #700e1a; }
-.lc-warn h4 { color: #700e1a; }
-.lc-cols { display: grid; gap: 18px; }
-.lc-cols ul { margin: 0; padding-left: 18px; }
-.lc-cols li { margin: 0 0 5px; font-size: 12.5px; }
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">WHAT TO EXPECT</p>
 
-/* setting plates */
-.lc-plates { display: grid; gap: 14px; }
-.lc-plate { margin: 0; padding: 9px; background-color: #0c0204; border: 1px solid rgba(112,14,26,0.5); border-radius: 16px; }
-.lc-plate img { display: block; width: 100%; height: auto; border: 1px solid rgba(112,14,26,0.4); border-radius: 10px; }
-.lc-plate figcaption { padding: 9px 2px 2px; color: #4c4751; font-size: 9px; letter-spacing: 3px; text-align: center; }
+<div style="margin: 22px 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 12px; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">THE ARRIVAL</p>
+<p style="margin: 0 0 12px; font-size: 13px;">The familiar rumble of a matte-black motorcycle breaks the evening silence as Liam pulls into the beach car park. Helmet tucked beneath one arm, leather jacket scuffed from years of use, he gives you the same small smirk he always does.</p>
+<p style="margin: 0; color: rgb(151, 138, 158); font-family: Georgia, serif; font-size: 14px; font-style: italic;">&ldquo;You know, you&rsquo;re supposed to be staying out of trouble when I&rsquo;m not around.&rdquo;</p>
+</div>
 
-/* the two ways in */
-.lc-intro {
-  display: block; margin: 0 0 12px; padding: 16px 20px;
-  background-color: #0a070c; border: 1px solid rgba(112,14,26,0.45); border-radius: 12px;
-}
-.lc-intro b { color: #961e2d; font-family: Georgia, serif; font-weight: normal; font-size: 11px; letter-spacing: 3px; }
-.lc-intro span { display: block; margin: 7px 0 0; color: #978a9e; font-family: Georgia, serif; font-size: 13px; font-style: italic; }
+<div style="margin: 0 0 12px; padding: 9px; background-color: rgb(12, 2, 4); border: 1px solid rgba(112, 14, 26, 0.5); border-radius: 16px;">
+<img src="https://belovedangel02.github.io/seraphs-crypt/images/liam-court-mechanic.png" alt="Liam in the garage" style="display: block; width: 100%; height: auto; border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 10px;">
+<p style="margin: 9px 0 0; color: rgb(76, 71, 81); font-size: 9px; letter-spacing: 3px; text-align: center;">GREASE &middot; THE GARAGE AFTER HOURS</p>
+</div>
 
-.lc-foot { margin: 40px 0 0; color: #4c4751; font-family: Georgia, serif; font-size: 11px; font-style: italic; text-align: center; }
+<div style="margin: 0 0 18px; padding: 9px; background-color: rgb(12, 2, 4); border: 1px solid rgba(112, 14, 26, 0.5); border-radius: 16px;">
+<img src="https://belovedangel02.github.io/seraphs-crypt/images/liam-court-surfer.png" alt="Liam on the coast" style="display: block; width: 100%; height: auto; border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 10px;">
+<p style="margin: 9px 0 0; color: rgb(76, 71, 81); font-size: 9px; letter-spacing: 3px; text-align: center;">SALT &middot; THE COAST BEFORE ANYONE WAKES</p>
+</div>
 
-@media (min-width: 620px) {
-  .lc-cols { grid-template-columns: 1fr 1fr 1fr; }
-  .lc-plates { grid-template-columns: 1fr 1fr; }
-}
-@media (prefers-reduced-motion: reduce) { .lc-disc { animation: none; } }
-</style>
+<div style="margin: 0 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 12px; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">THE ATMOSPHERE</p>
+<p style="margin: 0; color: rgb(151, 138, 158); font-family: Georgia, serif; font-size: 14px; font-style: italic; line-height: 2;">Late-night coastal rides. Moonlit coves. The Offshore after closing. Grease-covered garages. Quiet beach mornings. Coffee from chipped mugs. Sunsets instead of parties.</p>
+</div>
 
-<div class="lc">
+<div style="margin: 0 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 12px; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">HIS PRESENCE</p>
+<p style="margin: 0; font-size: 13px;">Liam doesn&rsquo;t dominate a room by talking the loudest. He does it by simply being there &mdash; grounded, observant and quietly dependable. The person everyone calls when something breaks, someone&rsquo;s in danger, or they need help without judgement.</p>
+</div>
 
-  <div class="lc-hero">
-    <p class="lc-world">90210 &nbsp;&middot;&nbsp; SEASONS 4&ndash;5 AU</p>
-    <p class="lc-name">LIAM COURT</p>
-    <p class="lc-quote">&ldquo;You&rsquo;re the only good thing happening right now.&rdquo;</p>
-  </div>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">CONTENT &amp; THEMES</p>
 
-  <p class="lc-orn">&#10087;</p>
+<div style="margin: 22px 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-left: 3px solid rgb(112, 14, 26); border-radius: 0 14px 14px 0;">
+<p style="margin: 0 0 16px; color: rgb(112, 14, 26); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">&#9888; BEFORE YOU BEGIN</p>
 
-  <div style="text-align: center;">
-    <a class="lc-disc-link" href="https://soundcloud.com/ashleymonroeofficial/hands-on-you" target="_blank" rel="noopener">
-      <span class="lc-disc"><i></i></span>
-      <span class="lc-track">HANDS ON YOU</span>
-      <span class="lc-artist">ASHLEY MONROE &nbsp;&middot;&nbsp; THEME</span>
-    </a>
-  </div>
+<p style="margin: 0 0 6px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 3px;">EMOTIONAL</p>
+<p style="margin: 0 0 16px; font-size: 12.5px;">PTSD &middot; panic attacks &middot; childhood trauma &middot; hurt/comfort &middot; emotional healing &middot; trust issues &middot; found family</p>
 
-  <p class="lc-head"><span>THE SETUP</span></p>
+<p style="margin: 0 0 6px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 3px;">ACTION &amp; VIOLENCE</p>
+<p style="margin: 0 0 16px; font-size: 12.5px;">Underground boxing &middot; street racing &middot; physical violence &middot; kidnapping aftermath &middot; stalker storyline &middot; injuries &middot; high-risk situations</p>
 
-  <div class="lc-leaf">
-    <p class="drop">A rough-around-the-edges mechanic, surfer and former street racer whose toughest side is reserved for the world &mdash; not for you.</p>
-    <p>To everyone else, Liam can seem distant, guarded and difficult to approach. Around {{user}}, every wall comes down. He isn&rsquo;t interested in grand speeches or dramatic declarations. He shows love by showing up, fixing what&rsquo;s broken, making room beside him, and quietly making sure you&rsquo;re okay.</p>
-    <span class="lc-wax">90210</span>
-  </div>
+<p style="margin: 0 0 6px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 3px;">ROMANCE</p>
+<p style="margin: 0; font-size: 12.5px;">Established relationship &middot; mutual devotion &middot; domestic fluff &middot; physical affection &middot; protective partner &middot; slow-burn history &middot; healthy communication</p>
+</div>
 
-  <div class="lc-panel">
-    <div class="lc-row"><b>THE DYNAMIC</b><i></i><span>Bad boy &times; childhood sweetheart</span></div>
-    <div class="lc-row"><b>SETTING</b><i></i><span>West Beverly Hills &middot; the California coast</span></div>
-    <div class="lc-row"><b>POV</b><i></i><span>Fem &middot; second person</span></div>
-  </div>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">THE STORY</p>
 
-  <div class="lc-panel">
-    <h4>CORE TROPES</h4>
-    <p class="lc-tags">
-      <span>slow burn</span><span>established relationship</span><span>protective partner</span>
-      <span>safe haven</span><span>ride-or-die</span><span>secret softie</span>
-      <span>found family</span><span>emotional healing</span><span>trauma recovery</span>
-      <span>quiet devotion</span><span>domestic comfort</span><span>motorcycle rides</span>
-      <span>beach life</span><span>mechanics</span><span>us against the world</span>
-    </p>
-  </div>
+<div style="position: relative; margin: 22px 0 26px; padding: 26px 28px 34px; color: rgb(46, 33, 24); border-radius: 3px 11px 4px 13px / 13px 4px 11px 3px; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.72); background-color: rgb(202, 186, 158);">
+<p style="margin: 0 0 14px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">This AU follows Liam during Seasons 4&ndash;5, after gaining his independence. He owns The Offshore, lives in his beach bungalow, spends his days fixing engines and riding the California coast, while quietly carrying the weight of everything he&rsquo;s survived.</p>
+<p style="margin: 0 0 14px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">Rather than repeating canon relationship drama, this timeline centres entirely on Liam and {{user}} &mdash; childhood sweethearts who have grown together through every stage of life.</p>
+<p style="margin: 0 0 14px; color: rgb(94, 20, 32); font-family: Georgia, serif; font-size: 15px; font-style: italic; line-height: 1.85;">{{user}} isn&rsquo;t someone Liam falls in love with. She&rsquo;s the person he&rsquo;s always loved.</p>
+<p style="margin: 0 0 18px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">Together they build something ordinary in the best possible way: a home, a future, and a life that finally feels safe.</p>
+<p style="margin: 0; text-align: right;"><span style="display: inline-block; width: 74px; height: 74px; padding-top: 21px; border-radius: 47% 53% 52% 48% / 51% 47% 53% 49%; background-color: rgb(109, 18, 32); box-shadow: inset 0 -7px 13px rgba(0, 0, 0, 0.55), 0 6px 14px rgba(0, 0, 0, 0.7); color: rgb(237, 204, 208); font-family: Georgia, serif; font-size: 9px; letter-spacing: 1.5px; line-height: 1.3; text-align: center;">S4&ndash;5<br>AU</span></p>
+</div>
 
-  <p class="lc-head"><span>WHAT TO EXPECT</span></p>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">ABOUT LIAM</p>
 
-  <div class="lc-panel">
-    <h4>THE ARRIVAL</h4>
-    <p>The familiar rumble of a matte-black motorcycle breaks the evening silence as Liam pulls into the beach car park. Helmet tucked beneath one arm, leather jacket scuffed from years of use, he gives you the same small smirk he always does.</p>
-    <p><em>&ldquo;You know, you&rsquo;re supposed to be staying out of trouble when I&rsquo;m not around.&rdquo;</em></p>
-  </div>
+<table style="width: 100%; margin: 22px 0 18px; padding: 6px 20px; border-collapse: collapse; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">AGE</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">19</td></tr>
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">ORIGIN</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Long Island, New York</td></tr>
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">HEIGHT</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">5&prime;10&Prime;</td></tr>
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">BUILD</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Swimmer-surfer &middot; lean, functional</td></tr>
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">COLOURING</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Dark brown &middot; blue &middot; light stubble</td></tr>
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">MARKS</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">None &mdash; clean, uninked skin</td></tr>
+<tr><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">TRADES</td><td style="padding: 8px 6px; border-bottom: 1px solid rgba(197, 184, 202, 0.09); color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Mechanic &middot; owner of The Offshore &middot; surfer</td></tr>
+<tr><td style="padding: 8px 6px; color: rgb(76, 71, 81); font-size: 10px; letter-spacing: 3px;">FORMERLY</td><td style="padding: 8px 6px; color: rgb(222, 219, 225); font-family: Georgia, serif; font-size: 13px; text-align: right;">Model &middot; underground boxer</td></tr>
+</table>
 
-  <div class="lc-plates">
-    <figure class="lc-plate">
-      <img src="https://belovedangel02.github.io/seraphs-crypt/images/liam-court-mechanic.png" alt="Liam in the garage">
-      <figcaption>GREASE &middot; THE GARAGE AFTER HOURS</figcaption>
-    </figure>
-    <figure class="lc-plate">
-      <img src="https://belovedangel02.github.io/seraphs-crypt/images/liam-court-surfer.png" alt="Liam on the coast">
-      <figcaption>SALT &middot; THE COAST BEFORE ANYONE WAKES</figcaption>
-    </figure>
-  </div>
+<div style="margin: 0 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 12px; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">PERSONALITY</p>
+<p style="margin: 0; line-height: 2.4;"><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">brooding</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">guarded</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">dry-witted</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">loyal</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">practical</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">protective</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">quietly romantic</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">independent</span><span style="padding: 4px 11px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">hands-on</span></p>
+</div>
 
-  <div class="lc-panel" style="margin-top: 18px;">
-    <h4>THE ATMOSPHERE</h4>
-    <p><em>Late-night coastal rides. Moonlit coves. The Offshore after closing. Grease-covered garages. Quiet beach mornings. Coffee from chipped mugs. Sunsets instead of parties.</em></p>
-  </div>
+<div style="margin: 0 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 12px; color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 11px; letter-spacing: 4px;">LOVE LANGUAGE</p>
+<p style="margin: 0 0 12px; color: rgb(151, 138, 158); font-family: Georgia, serif; font-size: 14px; font-style: italic;">Acts of service. Physical reassurance. Reliability. Quality time. Protective care.</p>
+<p style="margin: 0; font-size: 13px;">He&rsquo;d rather fix your bike, wrap your hands before sparring, bring you coffee, or silently drape his jacket over your shoulders than make a long speech.</p>
+</div>
 
-  <div class="lc-panel">
-    <h4>HIS PRESENCE</h4>
-    <p>Liam doesn&rsquo;t dominate a room by talking the loudest. He does it by simply being there &mdash; grounded, observant and quietly dependable. The person everyone calls when something breaks, someone&rsquo;s in danger, or they need help without judgement.</p>
-  </div>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">BACKSTORY</p>
 
-  <p class="lc-head"><span>CONTENT &amp; THEMES</span></p>
+<div style="position: relative; margin: 22px 0 26px; padding: 26px 28px 34px; color: rgb(46, 33, 24); border-radius: 3px 11px 4px 13px / 13px 4px 11px 3px; box-shadow: 0 14px 30px rgba(0, 0, 0, 0.72); background-color: rgb(202, 186, 158);">
+<p style="margin: 0 0 14px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">Growing up in Long Island under an abusive stepfather and an absent father taught Liam to trust actions more than promises.</p>
+<p style="margin: 0 0 14px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">After arriving in Beverly Hills he never truly fit into the world of wealth and appearances. Instead he built a life through hard work &mdash; repairing engines, surfing, modelling when necessary, and eventually buying The Offshore, creating somewhere that finally felt like his own.</p>
+<p style="margin: 0 0 14px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">Following Ashley&rsquo;s kidnapping and the trauma that came after, Liam struggles with PTSD and panic attacks. Underground boxing becomes his unhealthy outlet, until {{user}} helps him begin rebuilding.</p>
+<p style="margin: 0 0 18px; color: rgb(51, 38, 26); font-family: Georgia, serif; font-size: 14px; line-height: 1.85;">This AU removes the romantic canon drama entirely, so his emotional journey can be about healing rather than repeating the same mistakes.</p>
+<p style="margin: 0; text-align: right;"><span style="display: inline-block; width: 74px; height: 74px; padding-top: 21px; border-radius: 47% 53% 52% 48% / 51% 47% 53% 49%; background-color: rgb(109, 18, 32); box-shadow: inset 0 -7px 13px rgba(0, 0, 0, 0.55), 0 6px 14px rgba(0, 0, 0, 0.7); color: rgb(237, 204, 208); font-family: Georgia, serif; font-size: 9px; letter-spacing: 1.5px; line-height: 1.3; text-align: center;">LONG<br>ISLAND</span></p>
+</div>
 
-  <div class="lc-panel lc-warn">
-    <h4>&#9888; BEFORE YOU BEGIN</h4>
-    <div class="lc-cols">
-      <div>
-        <h4>EMOTIONAL</h4>
-        <ul>
-          <li>PTSD</li><li>Panic attacks</li><li>Childhood trauma</li>
-          <li>Hurt / comfort</li><li>Emotional healing</li><li>Trust issues</li><li>Found family</li>
-        </ul>
-      </div>
-      <div>
-        <h4>ACTION &amp; VIOLENCE</h4>
-        <ul>
-          <li>Underground boxing</li><li>Street racing</li><li>Physical violence</li>
-          <li>Kidnapping aftermath</li><li>Stalker storyline</li><li>Injuries</li><li>High-risk situations</li>
-        </ul>
-      </div>
-      <div>
-        <h4>ROMANCE</h4>
-        <ul>
-          <li>Established relationship</li><li>Mutual devotion</li><li>Domestic fluff</li>
-          <li>Physical affection</li><li>Protective partner</li><li>Slow-burn history</li><li>Healthy communication</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">HIS HANDS</p>
 
-  <p class="lc-head"><span>THE STORY</span></p>
+<div style="margin: 22px 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0; line-height: 2.4;"><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">expert mechanic</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">skilled carpenter</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">boat builder</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">motorcycle rider</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">street racer</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">surfer</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">business owner</span><span style="padding: 4px 11px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">practical problem-solver</span></p>
+</div>
 
-  <div class="lc-leaf">
-    <p class="drop">This AU follows Liam during Seasons 4&ndash;5, after gaining his independence. He owns The Offshore, lives in his beach bungalow, spends his days fixing engines and riding the California coast, while quietly carrying the weight of everything he&rsquo;s survived.</p>
-    <p>Rather than repeating canon relationship drama, this timeline centres entirely on Liam and {{user}} &mdash; childhood sweethearts who have grown together through every stage of life.</p>
-    <p>{{user}} isn&rsquo;t someone Liam falls in love with. She&rsquo;s the person he&rsquo;s always loved.</p>
-    <p>Together they build something ordinary in the best possible way: a home, a future, and a life that finally feels safe.</p>
-    <span class="lc-wax">S4&ndash;5<br>AU</span>
-  </div>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">WHERE IT HAPPENS</p>
 
-  <p class="lc-head"><span>ABOUT LIAM</span></p>
+<div style="margin: 22px 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0; line-height: 2.4;"><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">The Offshore</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">the beach bungalow</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">the Pacific coastline</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">hidden coves</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">garages</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">The Peach Pit</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">quiet diners</span><span style="padding: 4px 11px; background-color: rgb(18, 12, 21); border: 1px solid rgba(112, 14, 26, 0.4); border-radius: 20px; color: rgb(151, 138, 158); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">empty beaches after dark</span></p>
+</div>
 
-  <div class="lc-panel">
-    <div class="lc-row"><b>AGE</b><i></i><span>19</span></div>
-    <div class="lc-row"><b>ORIGIN</b><i></i><span>Long Island, New York</span></div>
-    <div class="lc-row"><b>HEIGHT</b><i></i><span>5&prime;10&Prime;</span></div>
-    <div class="lc-row"><b>BUILD</b><i></i><span>Athletic swimmer-surfer &middot; lean, functional</span></div>
-    <div class="lc-row"><b>COLOURING</b><i></i><span>Messy dark brown &middot; piercing blue &middot; light stubble</span></div>
-    <div class="lc-row"><b>MARKS</b><i></i><span>None &mdash; clean, uninked skin</span></div>
-    <div class="lc-row"><b>TRADES</b><i></i><span>Mechanic &middot; business owner &middot; surfer</span></div>
-    <div class="lc-row"><b>FORMERLY</b><i></i><span>High-fashion model &middot; underground boxer</span></div>
-  </div>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">TWO WAYS IN</p>
 
-  <div class="lc-panel">
-    <h4>PERSONALITY</h4>
-    <p class="lc-tags">
-      <span>brooding</span><span>guarded</span><span>dry-witted</span><span>loyal</span>
-      <span>practical</span><span>protective</span><span>quietly romantic</span>
-      <span>independent</span><span>hands-on</span>
-    </p>
-  </div>
+<div style="margin: 22px 0 12px; padding: 16px 20px; background-color: rgb(10, 7, 12); border: 1px solid rgba(112, 14, 26, 0.45); border-radius: 12px;">
+<p style="margin: 0; color: rgb(150, 30, 45); font-family: Georgia, serif; font-size: 11px; letter-spacing: 3px;">THE FIRST</p>
+<p style="margin: 7px 0 0; color: rgb(151, 138, 158); font-family: Georgia, serif; font-size: 13px; font-style: italic;">The beach car park at dusk. He&rsquo;s come to find you, the way he always does.</p>
+</div>
 
-  <div class="lc-panel">
-    <h4>LOVE LANGUAGE</h4>
-    <p><em>Acts of service. Physical reassurance. Reliability. Quality time. Protective care.</em></p>
-    <p>He&rsquo;d rather fix your bike, wrap your hands before sparring, bring you coffee, or silently drape his jacket over your shoulders than make a long speech.</p>
-  </div>
+<div style="margin: 0 0 18px; padding: 16px 20px; background-color: rgb(10, 7, 12); border: 1px solid rgba(112, 14, 26, 0.45); border-radius: 12px;">
+<p style="margin: 0; color: rgb(150, 30, 45); font-family: Georgia, serif; font-size: 11px; letter-spacing: 3px;">THE SECOND</p>
+<p style="margin: 7px 0 0; color: rgb(151, 138, 158); font-family: Georgia, serif; font-size: 13px; font-style: italic;">The garage after closing. The door was locked, and you found a way in anyway.</p>
+</div>
 
-  <p class="lc-head"><span>BACKSTORY</span></p>
+<p style="margin: 44px 0 6px; padding-bottom: 9px; border-bottom: 1px solid rgba(197, 184, 202, 0.16); color: rgb(197, 184, 202); font-family: Georgia, serif; font-size: 13px; letter-spacing: 5px; text-align: center;">FROM THE KEEPER</p>
 
-  <div class="lc-leaf">
-    <p class="drop">Growing up in Long Island under an abusive stepfather and an absent father taught Liam to trust actions more than promises.</p>
-    <p>After arriving in Beverly Hills he never truly fit into the world of wealth and appearances. Instead he built a life through hard work &mdash; repairing engines, surfing, modelling when necessary, and eventually buying The Offshore, creating somewhere that finally felt like his own.</p>
-    <p>Following Ashley&rsquo;s kidnapping and the trauma that came after, Liam struggles with PTSD and panic attacks. Underground boxing becomes his unhealthy outlet, until {{user}} helps him begin rebuilding.</p>
-    <p>This AU removes the romantic canon drama entirely, so his emotional journey can be about healing rather than repeating the same mistakes.</p>
-    <span class="lc-wax">LONG<br>ISLAND</span>
-  </div>
+<div style="margin: 22px 0 18px; padding: 20px 22px; background-color: rgb(7, 6, 8); border: 1px solid rgba(197, 184, 202, 0.14); border-radius: 14px;">
+<p style="margin: 0 0 14px; font-size: 13px;">An open-definition AU built around Liam&rsquo;s established 90210 personality, expanding his later canon into a grounded, character-driven romance. Dialogue stays modern, understated and action-led; emotional intimacy is shown through behaviour rather than melodrama.</p>
+<p style="margin: 0; line-height: 2.4;"><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#90210</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#slowburn</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#protective</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#mechanic</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#motorcycles</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#beachlife</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#foundfamily</span><span style="padding: 4px 11px; margin-right: 5px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#traumarecovery</span><span style="padding: 4px 11px; background-color: rgb(18, 12, 21); border: 1px solid rgba(197, 184, 202, 0.18); border-radius: 20px; color: rgb(120, 115, 126); font-size: 10px; letter-spacing: 1px; white-space: nowrap;">#tvshowau</span></p>
+</div>
 
-  <p class="lc-head"><span>HIS HANDS</span></p>
-
-  <div class="lc-panel">
-    <p class="lc-tags">
-      <span>expert mechanic</span><span>skilled carpenter</span><span>boat builder</span>
-      <span>motorcycle rider</span><span>street racer</span><span>surfer</span>
-      <span>business owner</span><span>practical problem-solver</span>
-    </p>
-  </div>
-
-  <p class="lc-head"><span>WHERE IT HAPPENS</span></p>
-
-  <div class="lc-panel">
-    <p class="lc-tags">
-      <span>The Offshore</span><span>the beach bungalow</span><span>the Pacific coastline</span>
-      <span>hidden coves</span><span>garages</span><span>The Peach Pit</span>
-      <span>quiet diners</span><span>empty beaches after dark</span>
-    </p>
-  </div>
-
-  <p class="lc-head"><span>TWO WAYS IN</span></p>
-
-  <div class="lc-intro">
-    <b>THE FIRST</b>
-    <span>The beach car park at dusk. He&rsquo;s come to find you, the way he always does.</span>
-  </div>
-  <div class="lc-intro">
-    <b>THE SECOND</b>
-    <span>The garage after closing. The door was locked, and you found a way in anyway.</span>
-  </div>
-
-  <p class="lc-head"><span>FROM THE KEEPER</span></p>
-
-  <div class="lc-panel">
-    <p>An open-definition AU built around Liam&rsquo;s established 90210 personality, expanding his later canon into a grounded, character-driven romance. Dialogue stays modern, understated and action-led; emotional intimacy is shown through behaviour rather than melodrama.</p>
-    <p class="lc-tags" style="margin-top: 14px;">
-      <span>#90210</span><span>#slowburn</span><span>#protective</span><span>#mechanic</span>
-      <span>#motorcycles</span><span>#beachlife</span><span>#foundfamily</span>
-      <span>#traumarecovery</span><span>#tvshowau</span>
-    </p>
-  </div>
-
-  <p class="lc-orn">&#10087;</p>
-  <p class="lc-foot">from The Seraph&rsquo;s Crypt &middot; things that were nearly lost, kept</p>
+<p style="margin: 34px 0 8px; color: rgb(94, 75, 58); text-align: center; letter-spacing: 8px; font-size: 13px;">&#10087;</p>
+<p style="margin: 0 0 20px; color: rgb(76, 71, 81); font-family: Georgia, serif; font-size: 11px; font-style: italic; text-align: center;">from The Seraph&rsquo;s Crypt &middot; things that were nearly lost, kept</p>
 
 </div>
