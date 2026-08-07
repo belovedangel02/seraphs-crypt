@@ -34,6 +34,7 @@ body {
 .pp-page-background, .profile-page-flex,
 .profile-info-stack, .profile-info-stack-inner,
 .pp-uc-background, .pp-uc-background > div, .pp-uc-about-me,
+.profile-uc-background-flex, .profile-uc-background-flex > div, .profile-about-me,
 [class*="Wrapper"], [class*="wrapper"],
 [class*="Container"], [class*="container"],
 [class*="Layout"], [class*="layout"],
@@ -42,6 +43,16 @@ body {
   background-image: none !important;
 }
 .profile-background-effect-image { display: none !important; }
+
+
+/* THE BUTTON THAT EATS THE CRYPT — the purple "Edit Profile" control writes
+   over everything in About Me. Lav's template hides it, and so does this.
+   Edit only through Settings. */
+.profile-member-since-box ~ button { display: none !important; }
+
+/* The page backdrop ships blurred and part-faded; both are undone here so
+   the crypt illustration reads at full strength. */
+.profile-page-background { filter: none !important; opacity: 1 !important; }
 
 /* THE SEALS THAT OPEN — the angel-wing sections */
 summary { list-style: none !important; cursor: pointer;
@@ -141,6 +152,11 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
 ::-webkit-scrollbar-thumb { background: #4c4751; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #c5b8ca; }
 
+
+/* NAMING — JanitorAI renamed its classes between Hime's template and Io's
+   (May 2026). Rules below carry both: the pp-* names and the profile-* ones.
+   Belt and braces until it is clear which your account serves. */
+
 /* ==========================================================================
    THE VESSELS — the bot cards
    Selector names verified against Hime's freely-published Dark Red template.
@@ -165,12 +181,13 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
   overflow: hidden;
   transition: border-color 0.4s ease;
 }
-.pp-cc-wrapper:hover .profile-character-card-stack {
+.pp-cc-wrapper:hover .profile-character-card-stack,
+.profile-character-card-wrapper:hover .profile-character-card-stack {
   border-color: rgba(150, 30, 45, 0.9) !important;
 }
 
 .profile-character-card-stack-link-component-box { grid-area: name; }
-.pp-cc-name {
+.pp-cc-name, .profile-character-card-name-box {
   padding: 7px 12px;
   background: linear-gradient(to right, rgba(112, 14, 26, 0.55), transparent) !important;
   color: #dedbe1 !important;
@@ -180,6 +197,7 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
 }
 
 .profile-character-card-avatar-aspect-ratio { grid-area: pfp; height: 250px; }
+.profile-character-card-avatar-image { border-radius: 10px; }
 .pp-cc-avatar { padding: 8px; border-radius: 12px; background: #030303; }
 
 .profile-character-card-description-box { grid-area: desc; padding: 4px 12px 0 4px; }
@@ -227,7 +245,8 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
 }
 
 /* Things the crypt does not need on a plate. */
-.pp-cc-creator-name, .pp-cc-star-line, .pp-cc-description hr { display: none !important; }
+.pp-cc-creator-name, .profile-character-card-creator-name-link,
+.pp-cc-star-line, .pp-cc-star, .pp-cc-description hr { display: none !important; }
 
 /* THE WORLD, NAMED — each card reads its own tags and stamps itself.
    -----------------------------------------------------------------
@@ -252,14 +271,22 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
   letter-spacing: 3px;
   text-align: right;
 }
-.pp-cc-wrapper:has(.pp-tag-90210) .profile-character-card-stack::after { content: '90210'; }
-.pp-cc-wrapper:has(.pp-tag-fourthwing) .profile-character-card-stack::after { content: 'FOURTH WING'; }
-.pp-cc-wrapper:has(.pp-tag-supernatural) .profile-character-card-stack::after { content: 'SUPERNATURAL'; }
-.pp-cc-wrapper:has(.pp-tag-percyjackson) .profile-character-card-stack::after { content: 'CAMP HALF-BLOOD'; }
-.pp-cc-wrapper:has(.pp-tag-elfhame) .profile-character-card-stack::after { content: 'ELFHAME'; }
-.pp-cc-wrapper:has(.pp-tag-anahuang) .profile-character-card-stack::after { content: 'ANA HUANG'; }
-.pp-cc-wrapper:has(.pp-tag-dystopian) .profile-character-card-stack::after { content: 'DARK ROMANCE & DYSTOPIAN'; }
-.pp-cc-wrapper:has(.pp-tag-losttales) .profile-character-card-stack::after { content: 'THE LOST TALES'; }
+.pp-cc-wrapper:has(.pp-tag-90210) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-90210)::after { content: '90210'; }
+.pp-cc-wrapper:has(.pp-tag-fourthwing) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-fourthwing)::after { content: 'FOURTH WING'; }
+.pp-cc-wrapper:has(.pp-tag-supernatural) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-supernatural)::after { content: 'SUPERNATURAL'; }
+.pp-cc-wrapper:has(.pp-tag-percyjackson) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-percyjackson)::after { content: 'CAMP HALF-BLOOD'; }
+.pp-cc-wrapper:has(.pp-tag-elfhame) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-elfhame)::after { content: 'ELFHAME'; }
+.pp-cc-wrapper:has(.pp-tag-anahuang) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-anahuang)::after { content: 'ANA HUANG'; }
+.pp-cc-wrapper:has(.pp-tag-dystopian) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-dystopian)::after { content: 'DARK ROMANCE & DYSTOPIAN'; }
+.pp-cc-wrapper:has(.pp-tag-losttales) .profile-character-card-stack::after,
+.profile-character-card-stack:has(.pp-tag-losttales)::after { content: 'THE LOST TALES'; }
 
 /* THE TALLY — the heading above the vessels, and the count beneath it */
 #profile-tabs::before {
@@ -276,15 +303,15 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
   text-align: center;
   pointer-events: none;
 }
-.pp-tabs-button, .pp-tabs-indicator { display: none !important; }
-.Btn2-purple strong {
+.pp-tabs-button, .pp-tabs-indicator, .profile-tabs-wrapper { display: none !important; }
+.Btn2-purple strong, .profile-badge-total-count {
   color: #c5b8ca !important;
   font-family: Georgia, 'Times New Roman', serif !important;
   font-size: clamp(1.6rem, 4vw, 2.2rem) !important;
 }
 
 /* THE WORDMARK — the crypt names itself in the site's own corner */
-.glow-logo :is(h2, p) {
+.glow-logo :is(h2, p), .profile-top-bar-logo-name, .profile-top-bar-logo-sub-name {
   font-size: 0 !important;
   color: #c5b8ca !important;
   font-family: Georgia, 'Times New Roman', serif !important;
@@ -294,7 +321,7 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
 .glow-logo p::after  { content: " CRYPT"; font-size: 17px; letter-spacing: 3px; color: #700e1a; }
 
 /* THE COUNT — followers, told as the crypt would tell it */
-.pp-uc-followers-count {
+.pp-uc-followers-count, .profile-followers-count {
   color: #c5b8ca !important;
   font-family: Georgia, 'Times New Roman', serif !important;
   font-weight: normal !important;

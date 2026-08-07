@@ -15,6 +15,35 @@ one — take the ideas, don't take a layout wholesale and call it yours.
 
 ## Two kinds of class name
 
+## The names changed — carry both
+
+JanitorAI renamed a swathe of classes between Hime's Dark Red template and
+Io's, which was last updated 12 May 2026. Anything written against the older
+`pp-uc-*` names may match nothing now. Rules in `profile-css-lean.txt` list
+both, which costs a few bytes and survives either.
+
+| Older (`pp-*`) | Current (`profile-*`) | What it is |
+|---|---|---|
+| `.pp-uc-title` | `.profile-title-heading` | your username |
+| `.pp-uc-followers-count` | `.profile-followers-count` | follower count |
+| `.pp-uc-about-me` | `.profile-about-me` | the About Me container |
+| `.pp-uc-background` | `.profile-uc-background-flex` | the bio card |
+| `.pp-uc-avatar` | `.profile-avatar` | profile picture |
+| `.pp-uc-avatar-container` | `.profile-avatar-container` | its frame |
+| `.pp-cc-name` | `.profile-character-card-name-box` | bot name |
+| `.pp-cc-creator-name` | `.profile-character-card-creator-name-link` | creator credit |
+| `.glow-logo h2` / `p` | `.profile-top-bar-logo-name` / `-sub-name` | the JanitorAI wordmark |
+| `.pp-tabs-*` | `.profile-tabs-wrapper` | the Characters tab strip |
+| `.Btn2-purple strong` | `.profile-badge-total-count` | the character count |
+| — | `.profile-badge-total-text` | the word "characters" — zero it, redraw with `::after` |
+| — | `.profile-character-card-avatar-image` | the portrait itself |
+| — | `.profile-character-search-input` | the profile's own search |
+| — | `.profile-member-since-box` | join date |
+
+`.pp-tag-*` and `.pp-cc-wrapper` kept their prefixes. `:has()` works on the
+card directly — `.profile-character-card-stack:has(.pp-tag-losttales)::after` —
+which is steadier than reaching through the wrapper.
+
 **Semantic, stable — use these.** They read like names a developer chose, and
 they survive redeploys:
 
@@ -223,6 +252,36 @@ Two more from the carrd worth remembering: **there is no autosave and the CSS
 Editor has no undo**, so keep the repo copy authoritative; and **saving in one
 editor can overwrite the other**, so stick to About Me and leave the in-page
 editor alone.
+
+## Ways to lose the lot
+
+Every template author warns about the same three, in capitals:
+
+1. **The purple "Edit Profile" button wipes your code.** Not the CSS Editor —
+   the ordinary edit button on your own profile page. Lav hides it outright,
+   and so do we: `.profile-member-since-box ~ button { display: none; }`
+2. **The CSS Editor strips `/* comments */`** and has no undo. Edit through
+   Settings → About Me only.
+3. **Old code clashing with new.** Save the previous version elsewhere and
+   clear it before pasting a fresh one, rather than layering.
+
+The repo is the backup that makes all three survivable.
+
+## Credit
+
+JanitorAI's CSS policy is now enforced, not advisory: using any part of
+someone's template without credit can get your customisation permanently
+disabled, and mods will ask for proof of authorship in a dispute.
+
+Nothing in the crypt is anyone else's stylesheet. What has been taken from
+the community is *platform fact* — class names, which properties are
+disabled, which fields strip `<style>`. Those are observations about
+JanitorAI, not authored design, and the sources are credited here throughout:
+Puppy and MantaRae's CSS Collection, and the templates by Hime, Io, Lav,
+Tigerdropped and Procrastination.
+
+If any of their actual declarations ever do get used, credit goes in the
+pasted code where readers can see it, not only in this file.
 
 Source: the JanitorAI CSS Collection carrd, maintained by MantaRae and Puppy.
 
