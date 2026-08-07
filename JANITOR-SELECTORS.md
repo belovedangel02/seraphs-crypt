@@ -67,6 +67,28 @@ The part `profile-css.txt` was guessing at. These are real.
 | `.profile-character-card-stats-box` | stats cluster |
 | `.pp-cc-ribbon`, `.pp-cc-ribbon-wrap` | the corner ribbon |
 | `.pp-cc-creator-name`, `.pp-cc-star-line` | usually hidden on a themed profile |
+| `.pp-cc-star` | the star itself, separate from its line |
+| `.pp-cc-list-container` | the container holding every card |
+| `.pp-cc-tags-wrap-regular`, `.pp-cc-tags-custom` | built-in vs `#hashtag` tags |
+
+Hashed ones current as of Puppy's collection, and expected to rot:
+`.css-1s5evre` the card · `.css-1q7rmf0` the avatar box · `.css-k1urot` the
+tag row · `.css-jdhqy4` tooltips. Prefer the `pp-cc-*` names wherever one
+exists.
+
+**Cards side by side instead of stacked** — worth knowing for the vault:
+
+```css
+.pp-cc-list-container { display: flex; flex-direction: row; overflow-x: auto; overflow-y: hidden; }
+.pp-cc-wrapper { min-width: 12rem; }
+```
+
+**Fade the bottom of a card's portrait** — `mask-image` works, only
+`mask-composite` is disabled:
+
+```css
+.pp-cc-avatar { mask-image: linear-gradient(to bottom, #000, #000 80%, #0000 98%); }
+```
 
 **The article-card layout** is a grid on the card with named areas — portrait
 left, name across the top, blurb and tags right, a series label along the foot:
@@ -148,8 +170,25 @@ every `offset-*` · `-inline-start/end` · `-block-start/end`
 
 **`<details name="...">` does not work.** The `name` attribute is disabled, so
 the exclusive-accordion trick — open one, the others close — is not available.
-Those tab strips on the bought themes are doing it another way. The crypt's
-thirteen seals open independently, and that is the only option.
+
+**But a tab strip is still possible**, which this file previously said it was
+not. Io's method, from Puppy's collection: give each tab `tabindex="0"` so it
+can take focus, then drive the panels off `:focus` and sibling combinators.
+No `<details>`, no script.
+
+```css
+.tab:nth-of-type(1):focus ~ .wrap .panel:nth-of-type(1),
+.tab:nth-of-type(2):focus ~ .wrap .panel:nth-of-type(2) { opacity: 1; }
+```
+
+```html
+<div tabindex="0" class="tab">about me</div>
+<div tabindex="0" class="tab">rules</div>
+<div class="wrap"><div class="panel">…</div><div class="panel">…</div></div>
+```
+
+The catch is that focus is lost on a click elsewhere, so a panel closes when
+you click away. That is a fair trade for thirteen seals collapsing to a strip.
 
 **CSS variables are disabled.** Every colour has to be written out in full.
 No `--oxblood: #700e1a` and `var(--oxblood)` afterwards.
@@ -263,6 +302,26 @@ the bio. Our `profile-css-lean.txt` already does this on `body`.
 
 **A portrait row overlapping the hero** — five character plates centred beneath
 the display name, breaking the boundary between cover and content.
+
+**A page doll** — the local name for a cut-out pinned to the corner that stays
+put while the page scrolls. `position: fixed`, a high `z-index`, and a slow
+float. The crypt's raven is one.
+
+**Relabel the follower count** precisely, rather than hiding the lot:
+
+```css
+.pp-uc-followers-count span:nth-of-type(2) { font-size: 0; }
+.pp-uc-followers-count::after { content: "angels"; }
+```
+
+**Attach animation rather than switching it off.** Tigerdropped's pattern, and
+the safer way round — nothing to forget to disable:
+
+```css
+@media screen and (prefers-reduced-motion: no-preference) {
+  .thing { animation: float 3s ease-in-out infinite; }
+}
+```
 
 **Left sidebar** — *Circus Troupe* puts avatar, follow button, stats and a
 stacked nav column down the left, cards to the right. Grid areas on

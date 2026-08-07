@@ -88,9 +88,20 @@ font-family: Arial, Helvetica, sans-serif;
   .crypt-banner-title { font-size: 30px !important; }
 }
 
-/* THE ONE THAT WATCHES — pinned to the corner while the crypt scrolls past.
-   Never takes a tap, and steps aside on a phone where there is no room. */
+/* THE ONE THAT WATCHES — a page doll, in the local idiom. Pinned to the
+   corner while the crypt scrolls past, breathing very slightly. Never takes a
+   tap, and steps aside on a phone where there is no room. */
 .crypt-familiar { pointer-events: none; user-select: none; }
+@keyframes cryptRoost {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-9px); }
+  100% { transform: translateY(0); }
+}
+/* Attached only when no preference is set, rather than switched off after —
+   the pattern Tigerdropped documents, and the safer way round. */
+@media screen and (prefers-reduced-motion: no-preference) {
+  .crypt-familiar { animation: cryptRoost 7s ease-in-out infinite; }
+}
 @media (max-width: 900px) { .crypt-familiar { width: 96px !important; opacity: 0.72 !important; } }
 @media (max-width: 620px) { .crypt-familiar { display: none !important; } }
 
