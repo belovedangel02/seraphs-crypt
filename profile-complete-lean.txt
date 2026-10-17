@@ -157,10 +157,20 @@ select {
 }
 
 /* THE WAKING OF THE PORTRAIT — cards sleep grey, wake in colour */
-a:has(img) img { filter: grayscale(100%) contrast(108%) brightness(0.92);
-  transition: filter 0.55s ease, transform 0.55s ease; }
-a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
-  filter: grayscale(0%) contrast(105%) brightness(1); transform: scale(1.03); }
+/* Only JanitorAI character portraits — leave the Crypt's own imagery untouched. */
+.profile-character-card-stack .profile-character-card-avatar-image,
+.profile-character-card-stack .profile-character-card-avatar-aspect-ratio img,
+.profile-character-card-stack .pp-cc-avatar img {
+  filter: grayscale(100%) contrast(108%) brightness(0.92) !important;
+  transform: scale(1) !important;
+  transition: filter 0.55s ease, transform 0.55s ease !important;
+}
+.profile-character-card-stack:is(:hover, :active, :focus-within) .profile-character-card-avatar-image,
+.profile-character-card-stack:is(:hover, :active, :focus-within) .profile-character-card-avatar-aspect-ratio img,
+.profile-character-card-stack:is(:hover, :active, :focus-within) .pp-cc-avatar img {
+  filter: grayscale(0%) contrast(105%) brightness(1) !important;
+  transform: scale(1.03) !important;
+}
 #crypt-bio img, #crypt-bio a img { filter: none !important; transform: none !important; }
 
 
@@ -213,7 +223,8 @@ a:has(img):hover img, a:has(img):active img, a:has(img):focus-within img {
   transition: border-color 0.4s ease;
 }
 .pp-cc-wrapper:hover .profile-character-card-stack,
-.profile-character-card-wrapper:hover .profile-character-card-stack {
+.profile-character-card-wrapper:hover .profile-character-card-stack,
+.profile-character-card-stack:is(:hover, :active, :focus-within) {
   border-color: rgba(150, 30, 45, 0.9) !important;
 }
 
