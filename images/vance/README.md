@@ -42,3 +42,14 @@ Two additional user-selected sticker sheets, each with eight chibi illustrations
 - `images/vance/chibi/vance-chibi-royal-scenes-sheet.webp` — gothic curtain, fireplace, moonlit hall, snake hug, wedding roses, sleeping, cake, angry.
 
 **Upload status:** The chibi image binaries are not yet in GitHub; this is a committed inventory. Extract the ZIP and upload both files preserving their paths. Keep the Seraph's Crypt watermark on all published sheets and derived stickers.
+
+## Vance Top Trumps-style trading cards (prepared, not yet uploaded)
+
+Four additional Seraph's Crypt-branded cards were supplied as screenshots and cropped into individual JPEGs, packaged as `vance-trading-cards-github-upload.zip` for manual upload. The cards already display THE SERAPHS CRYPT branding at the top; preserve that visible branding when publishing.
+
+- `images/vance/cards/vance-card-02-altar.jpeg` — Altar Vance, black tank top, serpent tattoo, moonlit window; screenshot heading says RARE while printed card says EPIC.
+- `images/vance/cards/vance-card-03-cathedral-shush.jpeg` — Vance with finger to lips and coiled black serpent in cathedral; screenshot heading says RARE while card says LEGENDARY.
+- `images/vance/cards/vance-card-04-wedding-garden.jpeg` — Vance in black shirt, garden wedding arch; screenshot heading says EPIC while card says RARE.
+- `images/vance/cards/vance-card-05-cathedral.jpeg` — Vance in black shirt at flower-decorated gothic altar; screenshot heading says LEGENDARY while card says RARE.
+
+**Status:** Catalogue committed; image binaries are inside the prepared ZIP and still need manual upload to GitHub. The screenshots' card labels and the cards' printed rarity tiers conflict, so no rarity tier has been treated as authoritative. A fifth/common card is only partially visible in the screenshots and was not included.
