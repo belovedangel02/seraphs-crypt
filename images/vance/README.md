@@ -60,3 +60,37 @@ Four additional Seraph's Crypt-branded cards were supplied as screenshots and cr
 - Watermarked with The Seraph's Crypt logo. Prepared in `vance-comic-02-github-upload.zip` for upload.
 - **Status:** catalogue committed; image binary not yet uploaded to GitHub.
 - **Separate outstanding work:** comic strip 01 needs its Winchester-derived storyline replaced with Vance's actual lore and visual consistency corrected. Do not change comic 02 while fixing comic 01.
+
+
+## Serpent-form chronology: new references (6 November 2026)
+
+Four new user-supplied serpent illustrations are **explicitly split by Vance's age/era**. These represent his visual references and must not be blended into a single colour/appearance rule.
+
+| Era | Intended future repository filename | Appearance |
+|---|---|---|
+| **Young Vance** | `images/vance/forms/young-vance-01-black-gold-green-eyes.jpg` | Smooth black scales, delicate golden filigree, bright green eyes; misty gothic courtyard |
+| **Young Vance** | `images/vance/forms/young-vance-02-black-gold-sunbeams.jpg` | Black-and-gold coiled serpent, luminous green eyes; sunlight between cathedral towers |
+| **Present-day Vance** | `images/vance/forms/adult-vance-01-purple-shadow-roaring.jpg` | Massive dark violet-black serpent, amber/golden eyes, fangs and drifting shadow; stormy cathedral |
+| **Present-day Vance** | `images/vance/forms/adult-vance-02-purple-shadow-closeup.jpg` | More frontal roaring form, iridescent purple-black scales, amber eyes and shadow mist |
+
+These are visual age/form references, not evidence of literal canonical age, powers, or exact anatomy. Earlier character definition remains authoritative.
+
+**Assets prepared:** The four image files have been resized and branded with `THE SERAPHS CRYPT • @belovedangel02` in the downloadable archive `Vance_Repository_Complete_Reference_Assets.zip`. **Not yet uploaded as binary images to GitHub**. Their future paths are listed above for manual upload. Do not create text placeholders with image extensions or assume these raw.githubusercontent.com links are live.
+
+## Latest combined art inventory (6 November 2026)
+
+A new visual reference board is supplied as `images/vance/boards/vance-reference-board.jpg`. The board combines Vance, the wolf-trade AU, the four Top Trumps-style cards, and both chibi sheets. **Visual aid only:** AI-generated board copy contains some speculative/non-canon details (including a proposed height), which should not override the character definition.
+
+The four card images were supplied again and remain in the catalogue above; the download archive now contains **cropped, watermarked card images** rather than just chat screenshots:
+
+- `images/vance/cards/vance-card-02-altar.jpg`
+- `images/vance/cards/vance-card-03-cathedral-shush.jpg`
+- `images/vance/cards/vance-card-04-wedding-garden.jpg`
+- `images/vance/cards/vance-card-05-cathedral.jpg`
+
+Both chibi sheets are also included in the download archive:
+
+- `images/vance/chibi/vance-chibi-royal-scenes-sheet.jpg`
+- `images/vance/chibi/vance-chibi-expressions-sheet.jpg`
+
+**Important:** These eleven image binaries have been prepared for upload, but GitHub currently stores this catalogue, not the assets. Use the ZIP to upload them, preserving the archive's `images/vance/` directory paths.
