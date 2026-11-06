@@ -53,3 +53,10 @@ Four additional Seraph's Crypt-branded cards were supplied as screenshots and cr
 - `images/vance/cards/vance-card-05-cathedral.jpeg` — Vance in black shirt at flower-decorated gothic altar; screenshot heading says LEGENDARY while card says RARE.
 
 **Status:** Catalogue committed; image binaries are inside the prepared ZIP and still need manual upload to GitHub. The screenshots' card labels and the cards' printed rarity tiers conflict, so no rarity tier has been treated as authoritative. A fifth/common card is only partially visible in the screenshots and was not included.
+
+## Comic strip 02 — childhood serpent rescue (approved)
+
+- `images/vance/comics/vance-comic-02-childhood-rescue.jpeg` — nine-panel comic showing the stormy-night rescue of an injured young serpent shifter by child {{user}}, her care for him, his lasting memory of her kindness and scent, his later kingship, and their adult reunion and relationship. **User-approved story version; preserve this comic.**
+- Watermarked with The Seraph's Crypt logo. Prepared in `vance-comic-02-github-upload.zip` for upload.
+- **Status:** catalogue committed; image binary not yet uploaded to GitHub.
+- **Separate outstanding work:** comic strip 01 needs its Winchester-derived storyline replaced with Vance's actual lore and visual consistency corrected. Do not change comic 02 while fixing comic 01.
