@@ -33,3 +33,12 @@ Ten user-selected image candidates for Vance's JanitorAI profile in the Serpent 
 `https://raw.githubusercontent.com/belovedangel02/seraphs-crypt/main/images/vance/FILENAME`
 
 Upload the contents of the watermarked ZIP preserving its `images/vance/` paths.
+
+## Chibi sticker sheets (prepared, not yet uploaded)
+
+Two additional user-selected sticker sheets, each with eight chibi illustrations of Vance, have been watermarked with the Seraph's Crypt logo and packaged in `vance-watermarked-chibi-sheets.zip` for manual GitHub upload.
+
+- `images/vance/chibi/vance-chibi-expressions-sheet.jpeg` — sulking, laughing, winking, snake cuddles, blushing, strawberry, sleeping, grumpy.
+- `images/vance/chibi/vance-chibi-royal-scenes-sheet.webp` — gothic curtain, fireplace, moonlit hall, snake hug, wedding roses, sleeping, cake, angry.
+
+**Upload status:** The chibi image binaries are not yet in GitHub; this is a committed inventory. Extract the ZIP and upload both files preserving their paths. Keep the Seraph's Crypt watermark on all published sheets and derived stickers.
