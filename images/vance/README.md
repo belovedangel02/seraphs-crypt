@@ -94,3 +94,14 @@ Both chibi sheets are also included in the download archive:
 - `images/vance/chibi/vance-chibi-expressions-sheet.jpg`
 
 **Important:** These eleven image binaries have been prepared for upload, but GitHub currently stores this catalogue, not the assets. Use the ZIP to upload them, preserving the archive's `images/vance/` directory paths.
+
+## Ashford Pack character cards (7 November 2026)
+
+Two user-supplied portrait cards have been approved as visual references for the Ashford Pack associated with Vance's AU. Preserve these exact images, rather than regenerating or changing the characters. The source files were supplied in ChatGPT and are **not yet uploaded as binary images to this GitHub repository**.
+
+| Character | Intended image path | Details |
+|---|---|---|
+| Ethan | `images/vance/ashford-pack/ethan-blond-alpha-card.jpeg` | Ornate weathered-gold frame, gothic courtyard, blond Alpha with wolf ears and golden-brown tail, bare chest, dark trousers; visible ETHAN / BLOND ALPHA label. Original 1344 × 1808. |
+| Evan | `images/vance/ashford-pack/evan-enforcer-card.jpeg` | Dark black metal tactical frame, gothic courtyard, black-haired Enforcer with wolf ears and dark tail, bare chest, dark trousers; visible EVAN / CLASS: ENFORCER / FACTION: ASHFORD PACK text. Original 720 × 1280. |
+
+**Keep:** Eric is the Ashford Pack Delta, but no new Eric card was supplied in this batch. These are individual cards, not replacements for the existing three-wolf collage. Retain the images' original framing and wording. Do not publish raw URLs as live until the JPEG binaries have been uploaded to these paths.
